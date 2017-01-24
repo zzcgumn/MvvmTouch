@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MvvmViewController<ViewModel> : UIViewController where ViewModel: ViewControllerModel {
+open class MvvmViewController<ViewModel> : UIViewController where ViewModel: ViewControllerModel {
     
     public var viewModel: ViewModel?
     
