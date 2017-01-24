@@ -31,6 +31,8 @@ where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
         presentedViewController.viewModel = vm
         configureViewModel(vm)
         
+        presentedViewController.showCloseButton = true
+        
         let seque = UIStoryboardSegue(identifier: PresentFlowController.sequeIdentifier,
                                       source: presentingViewController,
                                       destination: presentedViewController) {
