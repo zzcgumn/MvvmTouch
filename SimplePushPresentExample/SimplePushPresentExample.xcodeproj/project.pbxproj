@@ -16,6 +16,9 @@
 		5B1C8B021E36959E00F3DD3B /* SimplePushPresentExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B011E36959E00F3DD3B /* SimplePushPresentExampleUITests.swift */; };
 		5B1C8B111E3695AD00F3DD3B /* MvvmTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C8B101E3695AD00F3DD3B /* MvvmTouch.framework */; };
 		5B1C8B1F1E36976F00F3DD3B /* MvvmTouch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B1C8B1A1E36972200F3DD3B /* MvvmTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BA0B63B1E37C5C200A50C41 /* ColoredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0B6391E37C5C200A50C41 /* ColoredViewController.swift */; };
+		5BA0B63C1E37C5C200A50C41 /* ColoredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA0B63A1E37C5C200A50C41 /* ColoredViewController.xib */; };
+		5BA0B63E1E37C5E200A50C41 /* ColoredViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0B63D1E37C5E200A50C41 /* ColoredViewControllerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		5B1C8B031E36959E00F3DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1C8B101E3695AD00F3DD3B /* MvvmTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MvvmTouch.framework; path = "../MvvmTouch/build/Debug-iphoneos/MvvmTouch.framework"; sourceTree = "<group>"; };
 		5B1C8B141E36972200F3DD3B /* MvvmTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MvvmTouch.xcodeproj; path = ../MvvmTouch/MvvmTouch.xcodeproj; sourceTree = "<group>"; };
+		5BA0B6391E37C5C200A50C41 /* ColoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredViewController.swift; sourceTree = "<group>"; };
+		5BA0B63A1E37C5C200A50C41 /* ColoredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColoredViewController.xib; sourceTree = "<group>"; };
+		5BA0B63D1E37C5E200A50C41 /* ColoredViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 				5B1C8AE81E36959E00F3DD3B /* Assets.xcassets */,
 				5B1C8AEA1E36959E00F3DD3B /* LaunchScreen.storyboard */,
 				5B1C8AED1E36959E00F3DD3B /* Info.plist */,
+				5BA0B63D1E37C5E200A50C41 /* ColoredViewControllerModel.swift */,
+				5BA0B6391E37C5C200A50C41 /* ColoredViewController.swift */,
+				5BA0B63A1E37C5C200A50C41 /* ColoredViewController.xib */,
 			);
 			path = SimplePushPresentExample;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C8AEC1E36959E00F3DD3B /* LaunchScreen.storyboard in Resources */,
+				5BA0B63C1E37C5C200A50C41 /* ColoredViewController.xib in Resources */,
 				5B1C8AE91E36959E00F3DD3B /* Assets.xcassets in Resources */,
 				5B1C8AE71E36959E00F3DD3B /* Main.storyboard in Resources */,
 			);
@@ -345,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA0B63B1E37C5C200A50C41 /* ColoredViewController.swift in Sources */,
 				5B1C8AE41E36959E00F3DD3B /* ViewController.swift in Sources */,
+				5BA0B63E1E37C5E200A50C41 /* ColoredViewControllerModel.swift in Sources */,
 				5B1C8AE21E36959E00F3DD3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +612,7 @@
 				5B1C8B081E36959E00F3DD3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B1C8B091E36959E00F3DD3B /* Build configuration list for PBXNativeTarget "SimplePushPresentExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +621,7 @@
 				5B1C8B0B1E36959E00F3DD3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B1C8B0C1E36959E00F3DD3B /* Build configuration list for PBXNativeTarget "SimplePushPresentExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +630,7 @@
 				5B1C8B0E1E36959E00F3DD3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

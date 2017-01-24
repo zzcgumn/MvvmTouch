@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import MvvmTouch
 
 class ViewController: UIViewController {
 
+    let presentFlowController = PresentFlowController<ColoredViewController, ColoredViewControllerModel>()
+    
+    @IBAction func presentColoredViewController(_ sender: UIButton) {
+        presentFlowController.present(presentingViewController: self, configureViewModel: {
+            vm in
+            vm.backgroundColor = sender.currentTitleColor
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

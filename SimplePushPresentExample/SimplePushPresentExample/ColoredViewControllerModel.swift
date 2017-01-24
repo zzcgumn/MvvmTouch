@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import MvvmTouch
+
+class ColoredViewControllerModel : ViewControllerModel {
+    
+    var backgroundColor = UIColor.white
+    
+    private let _dismiss: () -> Void
+    func dismissAction() {
+        _dismiss()
+    }
+    
+    required init(dismiss: @escaping () -> Void) {
+        _dismiss = dismiss
+    }
+    
+}
