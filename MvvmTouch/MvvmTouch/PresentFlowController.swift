@@ -6,7 +6,7 @@
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
-class PresentFlowController<Presented, ViewModel>
+public class PresentFlowController<Presented, ViewModel>
 where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
     
     static var sequeIdentifier: String {
@@ -14,17 +14,27 @@ where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
         return "present\(viewModelName)"
     }
     
-    func present(presentingViewController: UIViewController) {
+    public init() {
         
-        let presented = Presented()
-        presented.viewModel = ViewModel(dismiss: {
+    }
+    
+    public func present(presentingViewController: UIViewController,
+                        configureViewModel: (_ viewModel: ViewModel) -> Void = {_ in },
+                        makeViewController: () -> Presented = {Presented()}) {
+        
+        let presentedViewController = makeViewController()
+        
+        let vm = ViewModel(dismiss: {
             presentingViewController.dismiss(animated: true, completion: .none)
         })
         
+        presentedViewController.viewModel = vm
+        configureViewModel(vm)
+        
         let seque = UIStoryboardSegue(identifier: PresentFlowController.sequeIdentifier,
                                       source: presentingViewController,
-                                      destination: presented) {
-                                        presentingViewController.present(presented, animated: true, completion: .none)
+                                      destination: presentedViewController) {
+                                        presentingViewController.present(presentedViewController, animated: true, completion: .none)
         }
         
         seque.perform()
