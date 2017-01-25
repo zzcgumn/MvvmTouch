@@ -15,6 +15,10 @@
 		5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */; };
 		5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4931E3961F100558077 /* ViewModel.swift */; };
 		5B5DC4961E39628800558077 /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4951E39628800558077 /* MvvmView.swift */; };
+		5B5DC4981E39684C00558077 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4971E39684C00558077 /* TableCellModel.swift */; };
+		5B5DC49A1E3968B900558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */; };
+		5B5DC49C1E39693200558077 /* MvvmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */; };
+		5B5DC49E1E39697B00558077 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentFlowController.swift; sourceTree = "<group>"; };
 		5B5DC4931E3961F100558077 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5B5DC4951E39628800558077 /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
+		5B5DC4971E39684C00558077 /* TableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
+		5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
+		5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +91,15 @@
 			children = (
 				5B1C8A781E36949900F3DD3B /* MvvmTouch.h */,
 				5B1C8A791E36949900F3DD3B /* Info.plist */,
+				5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */,
 				5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */,
 				5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */,
 				5B5DC4951E39628800558077 /* MvvmView.swift */,
 				5B5DC4931E3961F100558077 /* ViewModel.swift */,
-				5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */,
+				5B5DC4971E39684C00558077 /* TableCellModel.swift */,
+				5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */,
+				5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */,
+				5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */,
 			);
 			path = MvvmTouch;
 			sourceTree = "<group>";
@@ -214,8 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5DC4981E39684C00558077 /* TableCellModel.swift in Sources */,
+				5B5DC49A1E3968B900558077 /* MvvmTableViewCell.swift in Sources */,
 				5B1C8B231E36994A00F3DD3B /* ViewControllerModel.swift in Sources */,
+				5B5DC49E1E39697B00558077 /* CollectionCellModel.swift in Sources */,
 				5B5DC4961E39628800558077 /* MvvmView.swift in Sources */,
+				5B5DC49C1E39693200558077 /* MvvmCollectionViewCell.swift in Sources */,
 				5B1C8B211E3698FE00F3DD3B /* MvvmViewController.swift in Sources */,
 				5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */,
 				5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */,
