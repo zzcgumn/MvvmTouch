@@ -8,14 +8,14 @@
 
 import UIKit
 
-open class MvvmViewController<ViewModel> : UIViewController where ViewModel: ViewControllerModel {
+open class MvvmViewController<Model> : UIViewController where Model: ViewControllerModel {
     
     open override func awakeFromNib() {
         super.awakeFromNib()
         self.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    public var viewModel: ViewModel?
+    public var viewModel: Model?
     
     @objc private func closeButtonTapped(_ sender: UIButton) {
         viewModel?.dismissAction()

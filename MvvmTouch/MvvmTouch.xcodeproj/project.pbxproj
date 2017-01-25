@@ -13,6 +13,8 @@
 		5B1C8B211E3698FE00F3DD3B /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */; };
 		5B1C8B231E36994A00F3DD3B /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */; };
 		5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */; };
+		5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4931E3961F100558077 /* ViewModel.swift */; };
+		5B5DC4961E39628800558077 /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4951E39628800558077 /* MvvmView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
 		5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentFlowController.swift; sourceTree = "<group>"; };
+		5B5DC4931E3961F100558077 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5B5DC4951E39628800558077 /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				5B1C8A791E36949900F3DD3B /* Info.plist */,
 				5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */,
 				5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */,
+				5B5DC4951E39628800558077 /* MvvmView.swift */,
+				5B5DC4931E3961F100558077 /* ViewModel.swift */,
 				5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */,
 			);
 			path = MvvmTouch;
@@ -209,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1C8B231E36994A00F3DD3B /* ViewControllerModel.swift in Sources */,
+				5B5DC4961E39628800558077 /* MvvmView.swift in Sources */,
 				5B1C8B211E3698FE00F3DD3B /* MvvmViewController.swift in Sources */,
+				5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */,
 				5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +426,7 @@
 				5B1C8A8B1E36949A00F3DD3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B1C8A8C1E36949A00F3DD3B /* Build configuration list for PBXNativeTarget "MvvmTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +435,7 @@
 				5B1C8A8E1E36949A00F3DD3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
