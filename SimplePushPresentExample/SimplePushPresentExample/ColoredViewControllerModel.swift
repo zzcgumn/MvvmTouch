@@ -9,8 +9,8 @@
 import Foundation
 import MvvmTouch
 
-struct ColoredViewControllerModel :ViewControllerModel {
-    
+struct ColoredViewControllerModel: ViewControllerModel {
+
     let backgroundColor: UIColor
-    
+
 }
