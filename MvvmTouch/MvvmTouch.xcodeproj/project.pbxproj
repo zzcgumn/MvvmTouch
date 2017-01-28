@@ -10,16 +10,16 @@
 		5B1C8A7F1E36949900F3DD3B /* MvvmTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C8A751E36949900F3DD3B /* MvvmTouch.framework */; };
 		5B1C8A841E36949A00F3DD3B /* MvvmTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8A831E36949A00F3DD3B /* MvvmTouchTests.swift */; };
 		5B1C8A861E36949A00F3DD3B /* MvvmTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C8A781E36949900F3DD3B /* MvvmTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B1C8B211E3698FE00F3DD3B /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */; };
-		5B1C8B231E36994A00F3DD3B /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */; };
-		5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */; };
-		5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4931E3961F100558077 /* ViewModel.swift */; };
-		5B5DC4961E39628800558077 /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4951E39628800558077 /* MvvmView.swift */; };
-		5B5DC4981E39684C00558077 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4971E39684C00558077 /* TableCellModel.swift */; };
-		5B5DC49A1E3968B900558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */; };
-		5B5DC49C1E39693200558077 /* MvvmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */; };
-		5B5DC49E1E39697B00558077 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */; };
-		5B5DC4A01E3D0D9800558077 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC49F1E3D0D9800558077 /* FlowController.swift */; };
+		5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A81E3D157800558077 /* FlowController.swift */; };
+		5B5DC4AB1E3D157800558077 /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A91E3D157800558077 /* PresentFlowController.swift */; };
+		5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */; };
+		5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4AE1E3D158E00558077 /* ViewModel.swift */; };
+		5B5DC4B31E3D158E00558077 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4AF1E3D158E00558077 /* ViewControllerModel.swift */; };
+		5B5DC4B41E3D158E00558077 /* TableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B01E3D158E00558077 /* TableCellModel.swift */; };
+		5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B11E3D158E00558077 /* CollectionCellModel.swift */; };
+		5B5DC4B91E3D159E00558077 /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B61E3D159E00558077 /* MvvmView.swift */; };
+		5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */; };
+		5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +39,16 @@
 		5B1C8A7E1E36949900F3DD3B /* MvvmTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1C8A831E36949A00F3DD3B /* MvvmTouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTouchTests.swift; sourceTree = "<group>"; };
 		5B1C8A851E36949A00F3DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
-		5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
-		5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentFlowController.swift; sourceTree = "<group>"; };
-		5B5DC4931E3961F100558077 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		5B5DC4951E39628800558077 /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
-		5B5DC4971E39684C00558077 /* TableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
-		5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
-		5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCollectionViewCell.swift; sourceTree = "<group>"; };
-		5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
-		5B5DC49F1E3D0D9800558077 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		5B5DC4A81E3D157800558077 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		5B5DC4A91E3D157800558077 /* PresentFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentFlowController.swift; sourceTree = "<group>"; };
+		5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
+		5B5DC4AE1E3D158E00558077 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5B5DC4AF1E3D158E00558077 /* ViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		5B5DC4B01E3D158E00558077 /* TableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellModel.swift; sourceTree = "<group>"; };
+		5B5DC4B11E3D158E00558077 /* CollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
+		5B5DC4B61E3D159E00558077 /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
+		5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,18 +91,12 @@
 		5B1C8A771E36949900F3DD3B /* MvvmTouch */ = {
 			isa = PBXGroup;
 			children = (
+				5B5DC4A41E3D144B00558077 /* FlowController */,
+				5B5DC4A51E3D144B00558077 /* ViewController */,
+				5B5DC4A61E3D144B00558077 /* ViewModel */,
+				5B5DC4A71E3D14A100558077 /* View */,
 				5B1C8A781E36949900F3DD3B /* MvvmTouch.h */,
 				5B1C8A791E36949900F3DD3B /* Info.plist */,
-				5B5DC49F1E3D0D9800558077 /* FlowController.swift */,
-				5B1C8B241E36AE4600F3DD3B /* PresentFlowController.swift */,
-				5B1C8B201E3698FE00F3DD3B /* MvvmViewController.swift */,
-				5B1C8B221E36994A00F3DD3B /* ViewControllerModel.swift */,
-				5B5DC4951E39628800558077 /* MvvmView.swift */,
-				5B5DC4931E3961F100558077 /* ViewModel.swift */,
-				5B5DC4971E39684C00558077 /* TableCellModel.swift */,
-				5B5DC4991E3968B900558077 /* MvvmTableViewCell.swift */,
-				5B5DC49D1E39697B00558077 /* CollectionCellModel.swift */,
-				5B5DC49B1E39693200558077 /* MvvmCollectionViewCell.swift */,
 			);
 			path = MvvmTouch;
 			sourceTree = "<group>";
@@ -114,6 +108,44 @@
 				5B1C8A851E36949A00F3DD3B /* Info.plist */,
 			);
 			path = MvvmTouchTests;
+			sourceTree = "<group>";
+		};
+		5B5DC4A41E3D144B00558077 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				5B5DC4A81E3D157800558077 /* FlowController.swift */,
+				5B5DC4A91E3D157800558077 /* PresentFlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		5B5DC4A51E3D144B00558077 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5B5DC4A61E3D144B00558077 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B5DC4AE1E3D158E00558077 /* ViewModel.swift */,
+				5B5DC4AF1E3D158E00558077 /* ViewControllerModel.swift */,
+				5B5DC4B01E3D158E00558077 /* TableCellModel.swift */,
+				5B5DC4B11E3D158E00558077 /* CollectionCellModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B5DC4A71E3D14A100558077 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B5DC4B61E3D159E00558077 /* MvvmView.swift */,
+				5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */,
+				5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,16 +278,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5DC4981E39684C00558077 /* TableCellModel.swift in Sources */,
-				5B5DC49A1E3968B900558077 /* MvvmTableViewCell.swift in Sources */,
-				5B1C8B231E36994A00F3DD3B /* ViewControllerModel.swift in Sources */,
-				5B5DC4A01E3D0D9800558077 /* FlowController.swift in Sources */,
-				5B5DC49E1E39697B00558077 /* CollectionCellModel.swift in Sources */,
-				5B5DC4961E39628800558077 /* MvvmView.swift in Sources */,
-				5B5DC49C1E39693200558077 /* MvvmCollectionViewCell.swift in Sources */,
-				5B1C8B211E3698FE00F3DD3B /* MvvmViewController.swift in Sources */,
-				5B5DC4941E3961F100558077 /* ViewModel.swift in Sources */,
-				5B1C8B251E36AE4600F3DD3B /* PresentFlowController.swift in Sources */,
+				5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */,
+				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
+				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,
+				5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */,
+				5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */,
+				5B5DC4B31E3D158E00558077 /* ViewControllerModel.swift in Sources */,
+				5B5DC4AB1E3D157800558077 /* PresentFlowController.swift in Sources */,
+				5B5DC4B41E3D158E00558077 /* TableCellModel.swift in Sources */,
+				5B5DC4B91E3D159E00558077 /* MvvmView.swift in Sources */,
+				5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
