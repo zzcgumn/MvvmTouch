@@ -14,9 +14,8 @@ class ViewController: UIViewController {
     let presentFlowController = PresentFlowController<ColoredViewController, ColoredViewControllerModel>()
     
     @IBAction func presentColoredViewController(_ sender: UIButton) {
-        presentFlowController.present(presentingViewController: self, configureViewModel: {
-            vm in
-            vm.backgroundColor = sender.currentTitleColor
+        presentFlowController.present(presentingViewController: self, makeViewModel: {
+            return ColoredViewControllerModel(backgroundColor: sender.currentTitleColor)
         })
     }
     
