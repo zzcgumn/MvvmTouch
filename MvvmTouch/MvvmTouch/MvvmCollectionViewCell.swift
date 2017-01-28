@@ -9,6 +9,5 @@
 import UIKit
 
 class MvvmCollectionViewCell<Model> : UITableViewCell where Model: CollectionCellModel {
-    
-    
+
 }

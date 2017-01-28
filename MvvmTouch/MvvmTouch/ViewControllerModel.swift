@@ -10,5 +10,5 @@ import Foundation
 
 /** View models for a MvvmViewController needs to implement this protocol */
 public protocol ViewControllerModel {
- 
+
 }

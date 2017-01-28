@@ -10,5 +10,4 @@ import UIKit
 
 open class MvvmView<Model> : UIView where Model: ViewModel {
 
-
 }

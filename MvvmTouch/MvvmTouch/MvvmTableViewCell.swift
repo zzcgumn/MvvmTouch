@@ -10,5 +10,4 @@ import UIKit
 
 class MvvmTableViewCell<Model> : UITableViewCell where Model: TableCellModel {
 
-
 }

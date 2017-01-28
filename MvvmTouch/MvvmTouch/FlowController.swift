@@ -12,9 +12,9 @@ import UIKit
 protocol FlowController {
     associatedtype ViewModel
     associatedtype ViewController
-    
+
     static var sequeIdentifier: String { get }
-    
+
     func present(presentingViewController: UIViewController,
                  makeViewModel: () -> ViewModel,
                  makeViewController: () -> ViewController)
