@@ -16,9 +16,12 @@ open class MvvmViewController<Model> : UIViewController where Model: ViewControl
     }
     
     public var viewModel: Model?
+    public var dismissAction: (() -> Void)?
     
     @objc private func closeButtonTapped(_ sender: UIButton) {
-        viewModel?.dismissAction()
+        if let action = dismissAction {
+            action()
+        }
     }
     
     private var closeButton: UIButton? = .none

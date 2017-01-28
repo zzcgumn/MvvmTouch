@@ -19,17 +19,16 @@ where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
     }
     
     public func present(presentingViewController: UIViewController,
-                        configureViewModel: (_ viewModel: ViewModel) -> Void = {_ in },
+                        makeViewModel: () -> ViewModel,
                         makeViewController: () -> Presented = {Presented()}) {
         
         let presentedViewController = makeViewController()
-        
-        let vm = ViewModel(dismiss: {
+        presentedViewController.dismissAction = {
             presentingViewController.dismiss(animated: true, completion: .none)
-        })
+        }
         
+        let vm = makeViewModel()
         presentedViewController.viewModel = vm
-        configureViewModel(vm)
         
         presentedViewController.showCloseButton = true
         
