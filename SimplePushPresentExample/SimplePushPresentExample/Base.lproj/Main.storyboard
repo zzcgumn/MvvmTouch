@@ -48,15 +48,48 @@
                                     <action selector="presentColoredViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4k-9K-u8V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdc-Y0-enZ">
+                                <rect key="frame" x="153" y="254" width="68" height="30"/>
+                                <state key="normal" title="Push Pink">
+                                    <color key="titleColor" red="1" green="0.2583413369" blue="0.89354499379999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushColoredViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5e-b4-jTt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-C4-OrD">
+                                <rect key="frame" x="153" y="292" width="69" height="30"/>
+                                <state key="normal" title="Push Blue">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushColoredViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLR-yp-1Dp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w05-MJ-DfQ">
+                                <rect key="frame" x="152" y="330" width="71" height="30"/>
+                                <state key="normal" title="Push Grey">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushColoredViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13h-en-cvq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fAg-C4-OrD" firstAttribute="top" secondItem="kdc-Y0-enZ" secondAttribute="bottom" constant="8" id="5Ze-Bs-WAp"/>
                             <constraint firstItem="6p6-dH-zgo" firstAttribute="top" secondItem="bCW-IQ-3Pz" secondAttribute="bottom" constant="8" id="FnS-xF-6P8"/>
+                            <constraint firstItem="fAg-C4-OrD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hzv-6a-BmY"/>
+                            <constraint firstItem="kdc-Y0-enZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QKB-Dr-fs3"/>
                             <constraint firstItem="bCW-IQ-3Pz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WCU-48-fkv"/>
                             <constraint firstItem="jb9-Zr-aus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d2k-wH-i10"/>
+                            <constraint firstItem="w05-MJ-DfQ" firstAttribute="top" secondItem="fAg-C4-OrD" secondAttribute="bottom" constant="8" id="dgY-Ny-Pab"/>
                             <constraint firstItem="bCW-IQ-3Pz" firstAttribute="top" secondItem="jb9-Zr-aus" secondAttribute="bottom" constant="8" id="kbv-xo-Qek"/>
+                            <constraint firstItem="w05-MJ-DfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngj-jE-wee"/>
                             <constraint firstItem="6p6-dH-zgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2p-ah-W4H"/>
                             <constraint firstItem="jb9-Zr-aus" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="sOp-5c-kWS"/>
+                            <constraint firstItem="kdc-Y0-enZ" firstAttribute="top" secondItem="6p6-dH-zgo" secondAttribute="bottom" constant="8" id="xGW-pr-0TT"/>
                         </constraints>
                     </view>
                 </viewController>
