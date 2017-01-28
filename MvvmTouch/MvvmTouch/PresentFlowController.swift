@@ -6,7 +6,9 @@
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
-public class PresentFlowController<Presented, ViewModel>
+import UIKit
+
+public class PresentFlowController<Presented, ViewModel> : FlowController
 where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
     
     static var sequeIdentifier: String {
