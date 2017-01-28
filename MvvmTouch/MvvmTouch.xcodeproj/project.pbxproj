@@ -21,6 +21,7 @@
 		5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */; };
 		5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */; };
 		5B5DC4BD1E3D191400558077 /* MvvmViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */; };
+		5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
 		5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MvvmViewController+Buttons.swift"; sourceTree = "<group>"; };
+		5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				5B5DC4A81E3D157800558077 /* FlowController.swift */,
 				5B5DC4A91E3D157800558077 /* PresentFlowController.swift */,
+				5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */,
 			);
 			path = FlowController;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				5B5DC4B41E3D158E00558077 /* TableCellModel.swift in Sources */,
 				5B5DC4B91E3D159E00558077 /* MvvmView.swift in Sources */,
 				5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */,
+				5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
