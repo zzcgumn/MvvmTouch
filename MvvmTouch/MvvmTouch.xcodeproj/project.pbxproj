@@ -22,6 +22,7 @@
 		5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */; };
 		5B5DC4BD1E3D191400558077 /* MvvmViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */; };
 		5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */; };
+		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
 		5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MvvmViewController+Buttons.swift"; sourceTree = "<group>"; };
 		5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushFlowController.swift; sourceTree = "<group>"; };
+		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				5B5DC4A81E3D157800558077 /* FlowController.swift */,
 				5B5DC4A91E3D157800558077 /* PresentFlowController.swift */,
 				5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */,
+				5B985D671E4730990084D3FA /* ShowFlowController.swift */,
 			);
 			path = FlowController;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */,
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
+				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,
 				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,
 				5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */,
 				5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */,

@@ -1,19 +1,19 @@
 //
-//  PushFlowController.swift
+//  ShowFlowController.swift
 //  MvvmTouch
 //
-//  Created by Martin Nygren on 28/01/2017.
+//  Created by Martin Nygren on 05/02/2017.
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
 import UIKit
 
-public class PushFlowController<Presented, ViewModel> : FlowController
+public class ShowFlowController<Presented, ViewModel> : FlowController
 where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
 
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
-        return "push\(viewModelName)"
+        return "show\(viewModelName)"
     }
 
     public init() {
@@ -31,13 +31,14 @@ where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
 
         presentedViewController.showCloseButton = false
 
-        let seque = UIStoryboardSegue(identifier: PushFlowController.sequeIdentifier,
+        let seque = UIStoryboardSegue(identifier: ShowFlowController.sequeIdentifier,
                                       source: presentingViewController,
-                                      destination: presentedViewController) {
-                                        if let nav = presentingViewController.navigationController {
-                                            nav.pushViewController(presentedViewController, animated: true)
+                                      destination: presentedViewController) { [weak self] in
+                                        if let strongSelf = self {
+                                            presentingViewController.show(presentedViewController, sender: strongSelf)
                                         }
         }
 
-        seque.perform()    }
+        seque.perform()
+    }
 }
