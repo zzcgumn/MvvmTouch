@@ -8,6 +8,7 @@
 
 import Foundation
 
+/** View models for a MvvmView needs to implement this protocol */
 public protocol ViewModel {
 
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
-public protocol TableCellModel {
+/** View models for a MvvmTableViewCell needs to implement this protocol */
+public protocol TableCellModel: ViewModel {
 
 }

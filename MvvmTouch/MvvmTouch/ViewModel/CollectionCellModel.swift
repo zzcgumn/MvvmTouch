@@ -8,6 +8,7 @@
 
 import Foundation
 
-public protocol CollectionCellModel {
+/** View models for a MvvmCollectionViewCell needs to implement this protocol */
+public protocol CollectionCellModel: ViewModel {
 
 }
