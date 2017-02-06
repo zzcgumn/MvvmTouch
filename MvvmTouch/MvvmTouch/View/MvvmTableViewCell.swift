@@ -8,6 +8,7 @@
 
 import UIKit
 
-class MvvmTableViewCell<Model> : UITableViewCell where Model: TableCellModel {
+open class MvvmTableViewCell<Model> : UITableViewCell where Model: TableCellModel {
 
+    open var model: Model?
 }
