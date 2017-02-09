@@ -7,12 +7,38 @@
 //
 
 import UIKit
+import MvvmTouch
 
-class ViewController: UIViewController {
+struct ColoredCellModel: TableCellModel {
+
+    let backgroundColor: UIColor
+
+}
+
+class ColoredCellType: MvvmTableViewCell<ColoredCellModel> {
+
+    override var model: ColoredCellModel? {
+        didSet {
+            self.backgroundView?.backgroundColor = model?.backgroundColor
+            self.backgroundColor = model?.backgroundColor
+        }
+    }
+}
+
+class ViewController: MvvmCellModelTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let models = [ColoredCellModel(backgroundColor: .gray),
+                      ColoredCellModel(backgroundColor: .green),
+                      ColoredCellModel(backgroundColor: .blue)]
+
+        dataSource.sections = [MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models),
+                               MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models),
+                               MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models)]
+        tableView.reloadData()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +46,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
