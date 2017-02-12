@@ -1,8 +1,8 @@
 //
-//  MvvmTableViewController.swift
+//  MvvmTableViewDataSource.swift
 //  MvvmTouch
 //
-//  Created by Martin Nygren on 06/02/2017.
+//  Created by Martin Nygren on 12/02/2017.
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
@@ -16,12 +16,12 @@ public protocol MvvmCellTableViewSectionDataSource {
 
 open class MvvmCellTableViewDataSourceSection<CellModel, CellType>: MvvmCellTableViewSectionDataSource
 where CellModel: TableCellModel, CellType: UITableViewCell, CellType: MvvmTableViewCellProtocol, CellType.Model == CellModel {
-    
+
     public var models: [CellModel] = []
 
     public var numberOfItems: Int { return models.count }
 
-    public var cellIdentfier: String {
+    open var cellIdentfier: String {
         let cellModelName = String(describing: CellModel.self)
         return "cell\(cellModelName)"
     }
@@ -74,38 +74,3 @@ open class MvvmTableViewDataSource: NSObject, MvvmCellTableViewDataSource, UITab
         self.sections = sections
     }
 }
-
-open class MvvmCellModelTableViewController: UIViewController {
-    public let tableView = UITableView()
-    public let dataSource = MvvmTableViewDataSource(sections: [])
-
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = dataSource
-
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
-        view.addConstraints(constraintsForTableView())
-    }
-
-    open func constraintsForTableView() -> [NSLayoutConstraint] {
-        let top = view.topAnchor
-        let bottom = view.bottomAnchor
-
-        let margins = view.layoutMarginsGuide
-        let allConstraints = [
-            tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-        ]
-
-        allConstraints.forEach{ $0.isActive = true }
-
-        return allConstraints
-    }
-
-}
-

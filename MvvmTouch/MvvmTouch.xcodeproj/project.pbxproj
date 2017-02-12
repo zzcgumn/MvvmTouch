@@ -10,7 +10,7 @@
 		5B1C8A7F1E36949900F3DD3B /* MvvmTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1C8A751E36949900F3DD3B /* MvvmTouch.framework */; };
 		5B1C8A841E36949A00F3DD3B /* MvvmTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C8A831E36949A00F3DD3B /* MvvmTouchTests.swift */; };
 		5B1C8A861E36949A00F3DD3B /* MvvmTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1C8A781E36949900F3DD3B /* MvvmTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B4D29D41E493B8400F19FF4 /* MvvmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D29D31E493B8400F19FF4 /* MvvmTableViewController.swift */; };
+		5B4D29D41E493B8400F19FF4 /* MvvmCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D29D31E493B8400F19FF4 /* MvvmCellTableViewController.swift */; };
 		5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A81E3D157800558077 /* FlowController.swift */; };
 		5B5DC4AB1E3D157800558077 /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A91E3D157800558077 /* PresentFlowController.swift */; };
 		5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */; };
@@ -23,6 +23,7 @@
 		5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */; };
 		5B5DC4BD1E3D191400558077 /* MvvmViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */; };
 		5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */; };
+		5B63071F1E5096C900A2E349 /* MvvmTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */; };
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,7 @@
 		5B1C8A7E1E36949900F3DD3B /* MvvmTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1C8A831E36949A00F3DD3B /* MvvmTouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTouchTests.swift; sourceTree = "<group>"; };
 		5B1C8A851E36949A00F3DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B4D29D31E493B8400F19FF4 /* MvvmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewController.swift; sourceTree = "<group>"; };
+		5B4D29D31E493B8400F19FF4 /* MvvmCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCellTableViewController.swift; sourceTree = "<group>"; };
 		5B5DC4A81E3D157800558077 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		5B5DC4A91E3D157800558077 /* PresentFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentFlowController.swift; sourceTree = "<group>"; };
 		5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewCell.swift; sourceTree = "<group>"; };
 		5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MvvmViewController+Buttons.swift"; sourceTree = "<group>"; };
 		5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushFlowController.swift; sourceTree = "<group>"; };
+		5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewDataSource.swift; sourceTree = "<group>"; };
 		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +124,8 @@
 		5B4D29D11E493B3E00F19FF4 /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				5B4D29D31E493B8400F19FF4 /* MvvmTableViewController.swift */,
+				5B4D29D31E493B8400F19FF4 /* MvvmCellTableViewController.swift */,
+				5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -311,7 +314,8 @@
 				5B5DC4B91E3D159E00558077 /* MvvmView.swift in Sources */,
 				5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */,
 				5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */,
-				5B4D29D41E493B8400F19FF4 /* MvvmTableViewController.swift in Sources */,
+				5B4D29D41E493B8400F19FF4 /* MvvmCellTableViewController.swift in Sources */,
+				5B63071F1E5096C900A2E349 /* MvvmTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
