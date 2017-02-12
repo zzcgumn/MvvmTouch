@@ -24,6 +24,8 @@
 		5B5DC4BD1E3D191400558077 /* MvvmViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */; };
 		5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */; };
 		5B63071F1E5096C900A2E349 /* MvvmTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */; };
+		5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */; };
+		5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */; };
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MvvmViewController+Buttons.swift"; sourceTree = "<group>"; };
 		5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushFlowController.swift; sourceTree = "<group>"; };
 		5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewDataSource.swift; sourceTree = "<group>"; };
+		5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerModel.swift; sourceTree = "<group>"; };
+		5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewController.swift; sourceTree = "<group>"; };
 		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,7 @@
 			children = (
 				5B4D29D31E493B8400F19FF4 /* MvvmCellTableViewController.swift */,
 				5B63071E1E5096C900A2E349 /* MvvmTableViewDataSource.swift */,
+				5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -155,8 +160,9 @@
 			children = (
 				5B5DC4AE1E3D158E00558077 /* ViewModel.swift */,
 				5B5DC4AF1E3D158E00558077 /* ViewControllerModel.swift */,
-				5B5DC4B01E3D158E00558077 /* TableCellModel.swift */,
 				5B5DC4B11E3D158E00558077 /* CollectionCellModel.swift */,
+				5B5DC4B01E3D158E00558077 /* TableCellModel.swift */,
+				5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */,
+				5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */,
+				5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */,
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
 				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,
 				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,

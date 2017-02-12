@@ -8,16 +8,16 @@
 
 import UIKit
 
-public protocol MvvmCellTableViewSectionDataSource {
+public protocol MvvmTableViewSectionDataSource {
     var numberOfItems: Int { get }
     var cellIdentfier: String { get }
     func makeCell(tableView: UITableView, row: Int) -> UITableViewCell
 }
 
-open class MvvmCellTableViewDataSourceSection<CellModel, CellType>: MvvmCellTableViewSectionDataSource
+open class MvvmTableViewDataSourceSection<CellModel, CellType>: MvvmTableViewSectionDataSource
 where CellModel: TableCellModel, CellType: UITableViewCell, CellType: MvvmTableViewCellProtocol, CellType.Model == CellModel {
 
-    public var models: [CellModel] = []
+    public var models: [CellModel]
 
     public var numberOfItems: Int { return models.count }
 
@@ -50,12 +50,12 @@ where CellModel: TableCellModel, CellType: UITableViewCell, CellType: MvvmTableV
     }
 }
 
-public protocol MvvmCellTableViewDataSource {
-    var sections: [MvvmCellTableViewSectionDataSource] { get }
+public protocol MvvmTableViewDataSource {
+    var sections: [MvvmTableViewSectionDataSource] { get }
 }
 
-open class MvvmTableViewDataSource: NSObject, MvvmCellTableViewDataSource, UITableViewDataSource {
-    public var sections: [MvvmCellTableViewSectionDataSource]
+open class MvvmUITableViewDataSource: NSObject, MvvmTableViewDataSource, UITableViewDataSource {
+    public var sections: [MvvmTableViewSectionDataSource]
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].numberOfItems
@@ -65,12 +65,11 @@ open class MvvmTableViewDataSource: NSObject, MvvmCellTableViewDataSource, UITab
         return sections[indexPath.section].makeCell(tableView: tableView, row: indexPath.row)
     }
 
-
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
 
-    public init(sections: [MvvmCellTableViewSectionDataSource]) {
+    public init(sections: [MvvmTableViewSectionDataSource]) {
         self.sections = sections
     }
 }

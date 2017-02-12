@@ -8,9 +8,10 @@
 
 import UIKit
 
+/** Connects a UITableView with a MvvmTableViewDataSource */
 open class MvvmCellModelTableViewController: UIViewController {
     public let tableView = UITableView()
-    public let dataSource = MvvmTableViewDataSource(sections: [])
+    public let dataSource = MvvmUITableViewDataSource(sections: [])
 
     open override func viewDidLoad() {
         super.viewDidLoad()
