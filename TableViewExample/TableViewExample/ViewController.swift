@@ -10,9 +10,7 @@ import UIKit
 import MvvmTouch
 
 struct ColoredCellModel: TableCellModel {
-
     let backgroundColor: UIColor
-
 }
 
 class ColoredCellType: MvvmTableViewCell<ColoredCellModel> {
@@ -34,9 +32,9 @@ class ViewController: MvvmCellModelTableViewController {
                       ColoredCellModel(backgroundColor: .green),
                       ColoredCellModel(backgroundColor: .blue)]
 
-        dataSource.sections = [MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models),
-                               MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models),
-                               MvvmCellTableViewDataSourceSection<ColoredCellModel, ColoredCellType>(models: models)]
+        dataSource.sections = [MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models),
+                               MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models),
+                               MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models)]
         tableView.reloadData()
 
     }

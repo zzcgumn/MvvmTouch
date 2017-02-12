@@ -8,5 +8,7 @@
 
 import UIKit
 
-open class MvvmTableViewController<Model>: UIViewController {
+open class MvvmTableViewController<Model>: UIViewController
+where Model: TableViewControllerModel {
+    
 }

@@ -14,7 +14,8 @@ public protocol MvvmTableViewSectionDataSource {
     func makeCell(tableView: UITableView, row: Int) -> UITableViewCell
 }
 
-open class MvvmTableViewDataSourceSection<CellModel, CellType>: MvvmTableViewSectionDataSource
+/** Minimalistic convenience implementation of MvvmTableViewSectionDataSource. */
+open class MvvmTableViewSection<CellModel, CellType>: MvvmTableViewSectionDataSource
 where CellModel: TableCellModel, CellType: UITableViewCell, CellType: MvvmTableViewCellProtocol, CellType.Model == CellModel {
 
     public var models: [CellModel]
@@ -50,11 +51,16 @@ where CellModel: TableCellModel, CellType: UITableViewCell, CellType: MvvmTableV
     }
 }
 
-public protocol MvvmTableViewDataSource {
+public protocol MvvmTableViewDataSource: UITableViewDataSource {
     var sections: [MvvmTableViewSectionDataSource] { get }
 }
 
-open class MvvmUITableViewDataSource: NSObject, MvvmTableViewDataSource, UITableViewDataSource {
+/** Minimalistic convenience implementation of MvvmTableViewDataSource. 
+ 
+ Not that these methods cannot be declared in a protocol extension of MvvmTableViewDataSource
+ since protocol extension methods cannot be called from Objective-C
+ */
+open class MvvmUITableViewDataSource: NSObject, MvvmTableViewDataSource {
     public var sections: [MvvmTableViewSectionDataSource]
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
