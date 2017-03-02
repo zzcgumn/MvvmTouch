@@ -8,7 +8,8 @@
 
 import UIKit
 
-open class MvvmViewController<Model> : UIViewController where Model: ViewControllerModel {
+open class MvvmViewController<Model> : UIViewController
+where Model: ViewControllerModel {
 
     open override func awakeFromNib() {
         super.awakeFromNib()

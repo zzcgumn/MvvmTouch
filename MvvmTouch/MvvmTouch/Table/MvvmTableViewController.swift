@@ -10,5 +10,29 @@ import UIKit
 
 open class MvvmTableViewController<Model>: UIViewController
 where Model: TableViewControllerModel {
-    
+    public let tableView = UITableView()
+    public var viewModel: Model? {
+        didSet {
+            tableView.dataSource = viewModel?.dataSource
+        }
+    }
+
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        view.addConstraints(constraintsForTableView())
+    }
+
+    open func constraintsForTableView() -> [NSLayoutConstraint] {
+        return makeFillViewConstraints(subView: tableView)
+    }
 }

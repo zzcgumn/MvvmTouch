@@ -27,6 +27,7 @@
 		5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */; };
 		5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */; };
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
+		5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerModel.swift; sourceTree = "<group>"; };
 		5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewController.swift; sourceTree = "<group>"; };
 		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
+		5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UViewController+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */,
 				5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */,
+				5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */,
 				5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */,
 				5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */,
+				5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */,
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
 				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,
 				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,

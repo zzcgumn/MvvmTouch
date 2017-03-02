@@ -13,6 +13,12 @@ open class MvvmCellModelTableViewController: UIViewController {
     public let tableView = UITableView()
     public let dataSource = MvvmUITableViewDataSource(sections: [])
 
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+    }
+
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,20 +31,7 @@ open class MvvmCellModelTableViewController: UIViewController {
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {
-        let top = view.topAnchor
-        let bottom = view.bottomAnchor
-
-        let margins = view.layoutMarginsGuide
-        let allConstraints = [
-            tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-        ]
-
-        allConstraints.forEach{ $0.isActive = true }
-
-        return allConstraints
+        return makeFillViewConstraints(subView: tableView)
     }
 
 }
