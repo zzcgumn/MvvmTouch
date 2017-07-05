@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MvvmCollectionViewCell<Model> : UITableViewCell where Model: CollectionCellModel {
+open class MvvmCollectionViewCell<Model> : UITableViewCell where Model: CollectionCellModel {
 
 }

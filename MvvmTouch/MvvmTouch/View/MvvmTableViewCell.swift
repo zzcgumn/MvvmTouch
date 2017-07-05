@@ -8,6 +8,18 @@
 
 import UIKit
 
-class MvvmTableViewCell<Model> : UITableViewCell where Model: TableCellModel {
+public protocol MvvmTableViewCellProtocol {
+    associatedtype Model
+    var model: Model? { get set }
+}
 
+open class MvvmTableViewCell<Model>: UITableViewCell, MvvmTableViewCellProtocol where Model: TableCellModel {
+
+    open var model: Model?
+
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+
+        model = nil
+    }
 }
