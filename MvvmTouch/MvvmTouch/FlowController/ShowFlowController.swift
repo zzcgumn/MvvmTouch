@@ -9,7 +9,7 @@
 import UIKit
 
 public class ShowFlowController<Presented, ViewModel> : FlowController
-where ViewModel: ViewControllerModel, Presented: MvvmViewController<ViewModel> {
+where Presented: MvvmViewController<ViewModel> {
 
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
