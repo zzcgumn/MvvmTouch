@@ -17,8 +17,8 @@ extension MvvmViewController {
 
         button.setTitle("Close", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setContentHuggingPriority(1.0, for: .vertical)
-        button.setContentHuggingPriority(1.0, for: .horizontal)
+        button.setContentHuggingPriority(UILayoutPriority(rawValue: 1.0), for: .vertical)
+        button.setContentHuggingPriority(UILayoutPriority(rawValue: 1.0), for: .horizontal)
         button.setTitleColor(UIColor.blue, for: .normal)
         self.view.addSubview(button)
         let topConstraint = NSLayoutConstraint(item: button,
