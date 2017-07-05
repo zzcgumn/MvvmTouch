@@ -8,10 +8,10 @@
 
 import UIKit
 
-open class MvvmTableViewController<Model>: UIViewController
+open class MvvmTableViewController<Model>: MvvmViewController<Model>
 where Model: TableViewControllerModel {
     public let tableView = UITableView()
-    public var viewModel: Model? {
+    public override var viewModel: Model? {
         didSet {
             tableView.dataSource = viewModel?.dataSource
         }

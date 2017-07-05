@@ -9,6 +9,6 @@
 import Foundation
 
 /** View models for a MvvmTableViewController needs to implement this protocol */
-public protocol TableViewControllerModel {
+public protocol TableViewControllerModel: ViewControllerModel {
     var dataSource: MvvmTableViewDataSource { get }
 }
