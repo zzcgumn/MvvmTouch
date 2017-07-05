@@ -11,8 +11,6 @@ import UIKit
 extension UIViewController {
 
     func makeFillViewConstraints(subView: UIView) -> [NSLayoutConstraint] {
-        let top = view.topAnchor
-        let bottom = view.bottomAnchor
 
         let margins = view.layoutMarginsGuide
         let allConstraints = [
@@ -22,7 +20,7 @@ extension UIViewController {
             subView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
         ]
 
-        allConstraints.forEach{ $0.isActive = true }
+        allConstraints.forEach { $0.isActive = true }
 
         return allConstraints
     }

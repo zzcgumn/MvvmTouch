@@ -21,7 +21,7 @@ open class MvvmCellModelTableViewController: UIViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.dataSource = dataSource
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,4 +35,3 @@ open class MvvmCellModelTableViewController: UIViewController {
     }
 
 }
-

@@ -23,6 +23,23 @@ class ColoredCellType: MvvmTableViewCell<ColoredCellModel> {
     }
 }
 
+class ColoredCellSection: MvvmTableViewSection<ColoredCellModel, ColoredCellType> {
+    private let _header: String?
+
+    override var sectionHeaderTitle: String? { return _header }
+
+    override func canEdit(elementAt: Int) -> Bool {
+        print("called can edit")
+        return true
+    }
+
+    init(header: String, models: [ColoredCellModel]) {
+        self._header = header
+
+        super.init(models: models)
+    }
+}
+
 class ViewController: MvvmCellModelTableViewController {
 
     override func viewDidLoad() {
@@ -32,11 +49,10 @@ class ViewController: MvvmCellModelTableViewController {
                       ColoredCellModel(backgroundColor: .green),
                       ColoredCellModel(backgroundColor: .blue)]
 
-        dataSource.sections = [MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models),
-                               MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models),
-                               MvvmTableViewSection<ColoredCellModel, ColoredCellType>(models: models)]
+        dataSource.sections = [ColoredCellSection(header: "First Section", models: models),
+                               ColoredCellSection(header: "Second Section", models: models),
+                               ColoredCellSection(header: "Third Section", models: models)]
         tableView.reloadData()
-
     }
 
     override func didReceiveMemoryWarning() {
