@@ -28,11 +28,6 @@ class ColoredCellSection: MvvmTableViewSection<ColoredCellModel, ColoredCellType
 
     override var sectionHeaderTitle: String? { return _header }
 
-    override func canEdit(elementAt: Int) -> Bool {
-        print("called can edit")
-        return true
-    }
-
     init(header: String, models: [ColoredCellModel]) {
         self._header = header
 
