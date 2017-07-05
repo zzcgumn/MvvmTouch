@@ -6,4 +6,18 @@
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public class Flow {
+    public let source: UIViewController
+    public let destination: UIViewController
+    public let follow: () -> Void
+
+    public init(source: UIViewController,
+                destination: UIViewController,
+                follow: @escaping () -> Void) {
+        self.source = source
+        self.destination = destination
+        self.follow = follow
+    }
+}
