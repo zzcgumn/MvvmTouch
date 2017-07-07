@@ -43,7 +43,7 @@ class ColoredCellSection: MvvmTableViewSection<ColoredCellModel, ColoredCellType
     }
 }
 
-class ViewController: MvvmCellModelTableViewController {
+class ColoredTableViewController: MvvmCellModelTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class ViewController: MvvmCellModelTableViewController {
                       ColoredCellModel(backgroundColor: .green),
                       ColoredCellModel(backgroundColor: .blue)]
 
-        dataSource.sections = [ColoredCellSection(header: "First Section", models: models),
+        viewModel?.dataSource.sections = [ColoredCellSection(header: "First Section", models: models),
                                ColoredCellSection(header: "Second Section", models: models),
                                ColoredCellSection(header: "Third Section", models: models)]
         tableView.reloadData()

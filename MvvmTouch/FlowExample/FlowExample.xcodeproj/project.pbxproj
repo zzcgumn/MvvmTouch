@@ -8,22 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		5BF5E47A1F0D9B5E004FE921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5E4791F0D9B5E004FE921 /* AppDelegate.swift */; };
-		5BF5E47C1F0D9B5E004FE921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5E47B1F0D9B5E004FE921 /* ViewController.swift */; };
+		5BF5E47C1F0D9B5E004FE921 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5E47B1F0D9B5E004FE921 /* FlowViewController.swift */; };
 		5BF5E47F1F0D9B5E004FE921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E47D1F0D9B5E004FE921 /* Main.storyboard */; };
 		5BF5E4811F0D9B5E004FE921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E4801F0D9B5E004FE921 /* Assets.xcassets */; };
 		5BF5E4841F0D9B5E004FE921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E4821F0D9B5E004FE921 /* LaunchScreen.storyboard */; };
 		5BF5E48C1F0D9C1D004FE921 /* ColoredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5E48B1F0D9C1D004FE921 /* ColoredTableViewController.swift */; };
+		5BF5E4971F0EEB6E004FE921 /* MvvmTouch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BF5E4921F0EEB24004FE921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B1C8A751E36949900F3DD3B;
+			remoteInfo = MvvmTouch;
+		};
+		5BF5E4941F0EEB24004FE921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B1C8A7E1E36949900F3DD3B;
+			remoteInfo = MvvmTouchTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BF5E4961F0EEB5F004FE921 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5BF5E4971F0EEB6E004FE921 /* MvvmTouch.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5BF5E4761F0D9B5E004FE921 /* FlowExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5E4791F0D9B5E004FE921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BF5E47B1F0D9B5E004FE921 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BF5E47B1F0D9B5E004FE921 /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
 		5BF5E47E1F0D9B5E004FE921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BF5E4801F0D9B5E004FE921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF5E4831F0D9B5E004FE921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF5E4851F0D9B5E004FE921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF5E48B1F0D9C1D004FE921 /* ColoredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredTableViewController.swift; sourceTree = "<group>"; };
+		5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MvvmTouch.xcodeproj; path = ../../MvvmTouch.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +88,9 @@
 		5BF5E4781F0D9B5E004FE921 /* FlowExample */ = {
 			isa = PBXGroup;
 			children = (
+				5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */,
 				5BF5E4791F0D9B5E004FE921 /* AppDelegate.swift */,
-				5BF5E47B1F0D9B5E004FE921 /* ViewController.swift */,
+				5BF5E47B1F0D9B5E004FE921 /* FlowViewController.swift */,
 				5BF5E47D1F0D9B5E004FE921 /* Main.storyboard */,
 				5BF5E4801F0D9B5E004FE921 /* Assets.xcassets */,
 				5BF5E4821F0D9B5E004FE921 /* LaunchScreen.storyboard */,
@@ -65,6 +98,15 @@
 				5BF5E48B1F0D9C1D004FE921 /* ColoredTableViewController.swift */,
 			);
 			path = FlowExample;
+			sourceTree = "<group>";
+		};
+		5BF5E48E1F0EEB24004FE921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */,
+				5BF5E4951F0EEB24004FE921 /* MvvmTouchTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +119,7 @@
 				5BF5E4721F0D9B5E004FE921 /* Sources */,
 				5BF5E4731F0D9B5E004FE921 /* Frameworks */,
 				5BF5E4741F0D9B5E004FE921 /* Resources */,
+				5BF5E4961F0EEB5F004FE921 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -113,12 +156,35 @@
 			mainGroup = 5BF5E46D1F0D9B5E004FE921;
 			productRefGroup = 5BF5E4771F0D9B5E004FE921 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5BF5E48E1F0EEB24004FE921 /* Products */;
+					ProjectRef = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5BF5E4751F0D9B5E004FE921 /* FlowExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MvvmTouch.framework;
+			remoteRef = 5BF5E4921F0EEB24004FE921 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5BF5E4951F0EEB24004FE921 /* MvvmTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MvvmTouchTests.xctest;
+			remoteRef = 5BF5E4941F0EEB24004FE921 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5BF5E4741F0D9B5E004FE921 /* Resources */ = {
@@ -139,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF5E48C1F0D9C1D004FE921 /* ColoredTableViewController.swift in Sources */,
-				5BF5E47C1F0D9B5E004FE921 /* ViewController.swift in Sources */,
+				5BF5E47C1F0D9B5E004FE921 /* FlowViewController.swift in Sources */,
 				5BF5E47A1F0D9B5E004FE921 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
