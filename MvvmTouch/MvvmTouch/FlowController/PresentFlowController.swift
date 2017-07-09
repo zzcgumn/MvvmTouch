@@ -25,10 +25,12 @@ where Presented: MvvmViewController<ViewModel> {
                         makeViewController: () -> Presented = {Presented()}) {
 
         let presentedViewController = makeViewController()
-        presentedViewController.dismissAction = {
-            presentingViewController.dismiss(animated: true, completion: .none)
+        if presentedViewController.dismissAction == nil {
+            presentedViewController.dismissAction = {
+                presentingViewController.dismiss(animated: true, completion: .none)
+            }
         }
-
+        
         let vm = makeViewModel()
         presentedViewController.viewModel = vm
 

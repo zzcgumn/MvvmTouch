@@ -20,7 +20,7 @@ public class Flow<
                 destination: Destination,
                 onFollow: @escaping (_ : SourceModel) -> Void = { _ in  },
                 onCompleted: @escaping (_ destinationModel: DestinationModel, _ sourceModel: SourceModel) -> Void
-        = {_,_ in   }) {
+        = {_, _ in   }) {
         self.source = source
         self.destination = destination
         self.onFollow = onFollow
