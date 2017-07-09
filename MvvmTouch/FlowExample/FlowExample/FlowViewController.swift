@@ -9,7 +9,9 @@
 import UIKit
 import MvvmTouch
 
-class RootViewControllerModel: ViewControllerModel { }
+class RootViewControllerModel: ViewControllerModel {
+    public required init() { }
+}
 
 class FlowViewController: MvvmViewController<RootViewControllerModel> {
 

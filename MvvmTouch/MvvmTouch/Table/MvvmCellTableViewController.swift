@@ -10,6 +10,7 @@ import UIKit
 
 public class MvvmUITableViewModel: ViewControllerModel {
     public let dataSource = MvvmUITableViewDataSource(sections: [])
+    public required init() { }
 }
 
 /** Connects a UITableView with a MvvmTableViewDataSource */

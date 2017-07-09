@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimplePushPresentExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,17 +77,18 @@
                         <constraints>
                             <constraint firstItem="fAg-C4-OrD" firstAttribute="top" secondItem="kdc-Y0-enZ" secondAttribute="bottom" constant="8" id="5Ze-Bs-WAp"/>
                             <constraint firstItem="6p6-dH-zgo" firstAttribute="top" secondItem="bCW-IQ-3Pz" secondAttribute="bottom" constant="8" id="FnS-xF-6P8"/>
-                            <constraint firstItem="fAg-C4-OrD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hzv-6a-BmY"/>
-                            <constraint firstItem="kdc-Y0-enZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QKB-Dr-fs3"/>
-                            <constraint firstItem="bCW-IQ-3Pz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WCU-48-fkv"/>
-                            <constraint firstItem="jb9-Zr-aus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d2k-wH-i10"/>
+                            <constraint firstItem="fAg-C4-OrD" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="Hzv-6a-BmY"/>
+                            <constraint firstItem="kdc-Y0-enZ" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="QKB-Dr-fs3"/>
+                            <constraint firstItem="bCW-IQ-3Pz" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="WCU-48-fkv"/>
+                            <constraint firstItem="jb9-Zr-aus" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="d2k-wH-i10"/>
                             <constraint firstItem="w05-MJ-DfQ" firstAttribute="top" secondItem="fAg-C4-OrD" secondAttribute="bottom" constant="8" id="dgY-Ny-Pab"/>
                             <constraint firstItem="bCW-IQ-3Pz" firstAttribute="top" secondItem="jb9-Zr-aus" secondAttribute="bottom" constant="8" id="kbv-xo-Qek"/>
-                            <constraint firstItem="w05-MJ-DfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngj-jE-wee"/>
-                            <constraint firstItem="6p6-dH-zgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2p-ah-W4H"/>
-                            <constraint firstItem="jb9-Zr-aus" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="sOp-5c-kWS"/>
+                            <constraint firstItem="w05-MJ-DfQ" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="ngj-jE-wee"/>
+                            <constraint firstItem="6p6-dH-zgo" firstAttribute="centerX" secondItem="URa-iM-EJD" secondAttribute="centerX" id="r2p-ah-W4H"/>
+                            <constraint firstItem="jb9-Zr-aus" firstAttribute="top" secondItem="URa-iM-EJD" secondAttribute="top" constant="120" id="sOp-5c-kWS"/>
                             <constraint firstItem="kdc-Y0-enZ" firstAttribute="top" secondItem="6p6-dH-zgo" secondAttribute="bottom" constant="8" id="xGW-pr-0TT"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="URa-iM-EJD"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

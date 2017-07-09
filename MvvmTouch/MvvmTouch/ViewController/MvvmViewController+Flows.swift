@@ -9,23 +9,35 @@
 import UIKit
 
 extension MvvmViewController {
-    
-    public func modalFlow<Destination, DestinationModel: ViewModel>(
-        makeViewModel: (_ sourceModel: Model?) -> DestinationModel,
-        makeViewController: () -> Destination = { Destination() }) -> Flow
-        where Destination: MvvmViewController<DestinationModel> {
-            let destionationViewModel = makeViewModel(viewModel)
-            let destinationController = makeViewController()
-            let flow = PushFlowController<Destination, DestinationModel>()
 
-            return Flow(source: self,
-                        destination: destinationController,
-                        follow: {
-                            flow.present(presentingViewController: self,
-                                         makeViewModel: { destionationViewModel },
-                                         makeViewController: { destinationController})
-            })
+    public func modalFlow<DestinationModel, Destination>(
+        makeViewModel: @escaping (_ sourceModel: Model) -> DestinationModel = { _ in DestinationModel() },
+        makeViewController: @escaping () -> Destination = { Destination() },
+        onCompleted: @escaping (_ destinationModel: DestinationModel, _ sourceModel: Model) -> Void = {_, _ in }
+        ) -> Flow<Model, MvvmViewController, DestinationModel, Destination> {
+        let destinationController = makeViewController()
 
+        let followFlow: (_ sourceModel: Model) -> Void = { sourceModel in
+            let flowController = PresentFlowController<Destination, DestinationModel>()
+            let makeDestinationViewModel: () -> DestinationModel
+
+            if let viewModel = self.viewModel {
+                makeDestinationViewModel = { makeViewModel(viewModel) }
+            } else {
+                makeDestinationViewModel = { DestinationModel() }
+            }
+
+            flowController.present(presentingViewController: self,
+                         makeViewModel: makeDestinationViewModel,
+                         makeViewController: makeViewController)
+        }
+
+        let result: Flow<Model, MvvmViewController, DestinationModel, Destination> =
+        Flow(source: self,
+             destination:destinationController,
+             onFollow: { sourceModel in followFlow(sourceModel) },
+             onCompleted: onCompleted)
+
+        return result
     }
-
 }
