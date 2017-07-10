@@ -8,7 +8,13 @@
 
 import UIKit
 
-open class MvvmViewController<Model> : UIViewController
+protocol MvvmViewControllerProtocol {
+    associatedtype Model: ViewControllerModel
+    var viewModel: Model? { get set }
+    var dismissAction: (() -> Void)? { get set }
+}
+
+open class MvvmViewController<Model>: UIViewController, MvvmViewControllerProtocol
 where Model: ViewControllerModel {
 
     open override func awakeFromNib() {

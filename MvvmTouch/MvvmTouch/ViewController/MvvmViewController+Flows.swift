@@ -19,17 +19,23 @@ extension MvvmViewController {
 
         let followFlow: (_ sourceModel: Model) -> Void = { sourceModel in
             let flowController = PresentFlowController<Destination, DestinationModel>()
-            let makeDestinationViewModel: () -> DestinationModel
+            let makeDestinationViewModel = { makeViewModel(self.viewModel!) }
 
-            if let viewModel = self.viewModel {
-                makeDestinationViewModel = { makeViewModel(viewModel) }
-            } else {
-                makeDestinationViewModel = { DestinationModel() }
+            let makeDestination: () -> Destination = {
+                let vc = makeViewController()
+                if vc.dismissAction == nil {
+                    vc.dismissAction = {
+                        let dismissCompleted = { onCompleted(vc.viewModel!, self.viewModel!) }
+                        self.dismiss(animated: true, completion: dismissCompleted)
+                    }
+                }
+
+                return vc
             }
 
             flowController.present(presentingViewController: self,
                          makeViewModel: makeDestinationViewModel,
-                         makeViewController: makeViewController)
+                         makeViewController: makeDestination)
         }
 
         let result: Flow<Model, MvvmViewController, DestinationModel, Destination> =

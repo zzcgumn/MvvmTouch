@@ -11,6 +11,7 @@ import UIKit
 open class MvvmTableViewController<Model>: MvvmViewController<Model>
 where Model: TableViewControllerModel {
     public let tableView = UITableView()
+
     public override var viewModel: Model? {
         didSet {
             tableView.dataSource = viewModel?.dataSource
