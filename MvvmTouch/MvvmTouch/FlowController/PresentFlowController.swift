@@ -9,7 +9,10 @@
 import UIKit
 
 public class PresentFlowController<Presented, ViewModel> : FlowController
-where Presented: MvvmViewController<ViewModel> {
+where Presented: UIViewController&MvvmPresentableViewController&MvvmViewControllerProtocol,
+      Presented.ViewModel == ViewModel {
+    typealias Model = ViewModel
+    typealias Controller = Presented
 
     static var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
@@ -24,7 +27,7 @@ where Presented: MvvmViewController<ViewModel> {
                         makeViewModel: () -> ViewModel,
                         makeViewController: () -> Presented = {Presented.make()}) {
 
-        let presentedViewController = makeViewController()
+        var presentedViewController = makeViewController()
         if presentedViewController.dismissAction == nil {
             presentedViewController.dismissAction = {
                 presentingViewController.dismiss(animated: true, completion: .none)

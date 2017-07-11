@@ -9,8 +9,11 @@
 import UIKit
 
 public class PushFlowController<Presented, ViewModel> : FlowController
-where Presented: MvvmViewController<ViewModel> {
-
+where Presented: UIViewController&MvvmViewControllerProtocol,
+      Presented.ViewModel == ViewModel {
+    typealias Model = ViewModel
+    typealias Controller = Presented
+    
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
         return "push\(viewModelName)"
@@ -22,14 +25,12 @@ where Presented: MvvmViewController<ViewModel> {
 
     public func present(presentingViewController: UIViewController,
                         makeViewModel: () -> ViewModel,
-                        makeViewController: () -> Presented = {Presented.make()}) {
+                        makeViewController: () -> Presented = { Presented.make() }) {
 
-        let presentedViewController = makeViewController()
+        var presentedViewController = makeViewController()
 
         let vm = makeViewModel()
         presentedViewController.viewModel = vm
-
-        presentedViewController.showCloseButton = false
 
         let seque = UIStoryboardSegue(identifier: PushFlowController.sequeIdentifier,
                                       source: presentingViewController,

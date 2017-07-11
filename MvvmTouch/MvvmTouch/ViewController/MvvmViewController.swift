@@ -27,7 +27,6 @@ open class MvvmViewController<Model: ViewControllerModel>: UIViewController, Mvv
         self.view.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    open var viewController: MvvmViewController<Model> { return self }
     public var viewModel: Model?
     public var dismissAction: (() -> Void)?
 
@@ -48,7 +47,7 @@ open class MvvmViewController<Model: ViewControllerModel>: UIViewController, Mvv
         }
     }
 
-    public static func make() -> Self {
+    open static func make() -> Self {
         return self.init()
     }
 }

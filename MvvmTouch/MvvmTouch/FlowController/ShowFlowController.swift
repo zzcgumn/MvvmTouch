@@ -9,8 +9,11 @@
 import UIKit
 
 public class ShowFlowController<Presented, ViewModel> : FlowController
-where Presented: MvvmViewController<ViewModel> {
-
+    where Presented: UIViewController&MvvmViewControllerProtocol,
+          Presented.ViewModel == ViewModel {
+    typealias Model = ViewModel
+    typealias Controller = Presented
+    
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
         return "show\(viewModelName)"
@@ -24,12 +27,10 @@ where Presented: MvvmViewController<ViewModel> {
                         makeViewModel: () -> ViewModel,
                         makeViewController: () -> Presented = {Presented.make()}) {
 
-        let presentedViewController = makeViewController()
+        var presentedViewController = makeViewController()
 
         let vm = makeViewModel()
         presentedViewController.viewModel = vm
-
-        presentedViewController.showCloseButton = false
 
         let seque = UIStoryboardSegue(identifier: ShowFlowController.sequeIdentifier,
                                       source: presentingViewController,
