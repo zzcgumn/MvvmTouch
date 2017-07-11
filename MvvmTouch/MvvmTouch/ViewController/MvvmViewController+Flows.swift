@@ -12,9 +12,13 @@ extension MvvmViewController {
 
     public func modalFlow<DestinationModel, Destination>(
         makeViewModel: @escaping (_ sourceModel: Model) -> DestinationModel = { _ in DestinationModel() },
-        makeViewController: @escaping () -> Destination = { Destination() },
+        makeViewController: @escaping () -> Destination = { return Destination.make() },
         onCompleted: @escaping (_ destinationModel: DestinationModel, _ sourceModel: Model) -> Void = {_, _ in }
-        ) -> Flow<Model, MvvmViewController, DestinationModel, Destination> {
+        ) -> Flow<Model, MvvmViewController, DestinationModel, Destination>
+    where
+        Destination: MvvmPresentableViewController,
+        Destination.Model == DestinationModel,
+        Destination.Controller == Destination {
         let destinationController = makeViewController()
 
         let followFlow: (_ sourceModel: Model) -> Void = { sourceModel in
@@ -22,7 +26,7 @@ extension MvvmViewController {
             let makeDestinationViewModel = { makeViewModel(self.viewModel!) }
 
             let makeDestination: () -> Destination = {
-                let vc = makeViewController()
+                var vc = makeViewController()
                 if vc.dismissAction == nil {
                     vc.dismissAction = {
                         let dismissCompleted = { onCompleted(vc.viewModel!, self.viewModel!) }

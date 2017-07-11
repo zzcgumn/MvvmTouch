@@ -9,8 +9,8 @@
 import UIKit
 
 public class Flow<
-    SourceModel, Source: MvvmViewController<SourceModel>,
-    DestinationModel, Destination: MvvmViewController<DestinationModel>> {
+    SourceModel, Source: MvvmViewControllerProtocol,
+    DestinationModel, Destination: MvvmViewControllerProtocol> {
     public let source: Source
     public let destination: Destination
     public let onFollow: (_ sourceModel: SourceModel) -> Void

@@ -8,20 +8,26 @@
 
 import UIKit
 
-protocol MvvmViewControllerProtocol {
-    associatedtype Model: ViewControllerModel
-    var viewModel: Model? { get set }
+public protocol MvvmViewControllerProtocol {
+    associatedtype ViewModel: ViewControllerModel
+    var viewModel: ViewModel? { get set }
     var dismissAction: (() -> Void)? { get set }
+    static func make() -> Self
 }
 
-open class MvvmViewController<Model>: UIViewController, MvvmViewControllerProtocol
-where Model: ViewControllerModel {
+public protocol MvvmPresentableViewController {
+    var showCloseButton: Bool { get set}
+}
+
+open class MvvmViewController<Model: ViewControllerModel>: UIViewController, MvvmViewControllerProtocol {
+    public typealias ViewModel = Model
 
     open override func awakeFromNib() {
         super.awakeFromNib()
         self.view.translatesAutoresizingMaskIntoConstraints = false
     }
 
+    open var viewController: MvvmViewController<Model> { return self }
     public var viewModel: Model?
     public var dismissAction: (() -> Void)?
 
@@ -32,7 +38,7 @@ where Model: ViewControllerModel {
         }
     }
 
-    var showCloseButton: Bool = false {
+    public var showCloseButton: Bool = false {
         didSet {
             if showCloseButton {
                 doShowCloseButton()
@@ -41,4 +47,10 @@ where Model: ViewControllerModel {
             }
         }
     }
+
+    public static func make() -> Self {
+        return self.init()
+    }
 }
+
+extension MvvmViewController: MvvmPresentableViewController { }
