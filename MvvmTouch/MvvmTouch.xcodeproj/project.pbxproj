@@ -26,6 +26,8 @@
 		5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */; };
 		5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */; };
 		5B84FFD21F1555390032DC94 /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A91E3D157800558077 /* PresentFlowController.swift */; };
+		5B84FFD41F155C080032DC94 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4C38101F0D945800F4289A /* Flow.swift */; };
+		5B84FFD51F155CBF0032DC94 /* MvvmViewController+Flows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4C380C1F0D875600F4289A /* MvvmViewController+Flows.swift */; };
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
 		5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
@@ -315,8 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5DC4AD1E3D158500558077 /* MvvmViewController.swift in Sources */,
+				5B84FFD41F155C080032DC94 /* Flow.swift in Sources */,
 				5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */,
 				5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */,
+				5B84FFD51F155CBF0032DC94 /* MvvmViewController+Flows.swift in Sources */,
 				5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */,
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
 				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,

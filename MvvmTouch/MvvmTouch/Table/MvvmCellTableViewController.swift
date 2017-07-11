@@ -25,7 +25,9 @@ open class MvvmCellModelTableViewController: MvvmViewController<MvvmUITableViewM
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = MvvmUITableViewModel()
+        if viewModel == nil {
+            viewModel = MvvmUITableViewModel()
+        }
         tableView.dataSource = viewModel?.dataSource
 
         tableView.translatesAutoresizingMaskIntoConstraints = false

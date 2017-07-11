@@ -10,19 +10,16 @@ import UIKit
 
 extension MvvmViewController {
 
-    public func modalFlow<DestinationModel, Destination>(
-        makeViewModel: @escaping (_ sourceModel: Model) -> DestinationModel = { _ in DestinationModel() },
+    public func modalFlow<Destination: MvvmPresentableViewController>(
+        makeViewModel: @escaping (_ sourceModel: Model) -> Destination.ViewModel = { _ in Destination.ViewModel() },
         makeViewController: @escaping () -> Destination = { return Destination.make() },
-        onCompleted: @escaping (_ destinationModel: DestinationModel, _ sourceModel: Model) -> Void = {_, _ in }
-        ) -> Flow<Model, MvvmViewController, DestinationModel, Destination>
-    where
-        Destination: MvvmPresentableViewController,
-        Destination.Model == DestinationModel,
-        Destination.Controller == Destination {
+        onCompleted: @escaping (_ destinationModel: Destination.ViewModel, _ sourceModel: Model) -> Void = {_, _ in }
+        ) -> Flow<MvvmViewController, Destination> {
+
         let destinationController = makeViewController()
 
         let followFlow: (_ sourceModel: Model) -> Void = { sourceModel in
-            let flowController = PresentFlowController<Destination, DestinationModel>()
+            let flowController = PresentFlowController<Destination, Destination.ViewModel>()
             let makeDestinationViewModel = { makeViewModel(self.viewModel!) }
 
             let makeDestination: () -> Destination = {
@@ -42,9 +39,9 @@ extension MvvmViewController {
                          makeViewController: makeDestination)
         }
 
-        let result: Flow<Model, MvvmViewController, DestinationModel, Destination> =
+        let result: Flow<MvvmViewController, Destination> =
         Flow(source: self,
-             destination:destinationController,
+             destination: destinationController,
              onFollow: { sourceModel in followFlow(sourceModel) },
              onCompleted: onCompleted)
 
