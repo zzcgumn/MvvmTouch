@@ -2,15 +2,7 @@
 //  ColoredTableViewController.swift
 //  FlowExample
 //
-//  Created by Martin Nygren on 05/07/2017.
-//  Copyright © 2017 Martin Nygren. All rights reserved.
-//
-
-//
-//  ViewController.swift
-//  TableViewExample
-//
-//  Created by Martin Nygren on 05/02/2017.
+//  Created by Martin Nygren on 13/07/2017.
 //  Copyright © 2017 Martin Nygren. All rights reserved.
 //
 
@@ -53,8 +45,8 @@ class ColoredTableViewController: MvvmCellModelTableViewController {
                       ColoredCellModel(backgroundColor: .blue)]
 
         viewModel?.dataSource.sections = [ColoredCellSection(header: "First Section", models: models),
-                               ColoredCellSection(header: "Second Section", models: models),
-                               ColoredCellSection(header: "Third Section", models: models)]
+                                          ColoredCellSection(header: "Second Section", models: models),
+                                          ColoredCellSection(header: "Third Section", models: models)]
         tableView.reloadData()
     }
 }

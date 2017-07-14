@@ -34,6 +34,8 @@ open class MvvmCellModelTableViewController: MvvmViewController<MvvmUITableViewM
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         view.addConstraints(constraintsForTableView())
+
+        view.setNeedsLayout()
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {

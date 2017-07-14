@@ -10,6 +10,7 @@ import UIKit
 
 extension MvvmViewController {
 
+    /*
     public func modalFlow<Destination: MvvmPresentableViewController>(
         makeViewModel: @escaping (_ sourceModel: Model) -> Destination.ViewModel = { _ in Destination.ViewModel() },
         makeViewController: @escaping () -> Destination = { return Destination.make() },
@@ -46,5 +47,5 @@ extension MvvmViewController {
              onCompleted: onCompleted)
 
         return result
-    }
+    }*/
 }

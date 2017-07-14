@@ -15,17 +15,17 @@ class RootViewControllerModel: ViewControllerModel {
 
 class FlowViewController: MvvmViewController<RootViewControllerModel> {
 
-    var chooseColorFlow: Flow<FlowViewController, ColoredTableViewController>?
+    var chooseColorFlow: Flow<FlowViewController, ColoredViewController>?
 
     @objc func action(sender: UIButton!) {
-
+        chooseColorFlow?.follow()
     }
 
     @IBOutlet var pinkButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        chooseColorFlow = Flow<FlowViewController, ColoredTableViewController>.modalFlow(source: self)
+        chooseColorFlow = Flow<FlowViewController, ColoredViewController>.modalFlow(source: self)
 
         pinkButton.addTarget(self, action: #selector(action(sender:)), for: .touchUpInside)
     }
