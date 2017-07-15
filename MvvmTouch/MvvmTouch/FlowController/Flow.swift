@@ -9,10 +9,9 @@
 import UIKit
 
 public class Flow<Source: UIViewController&MvvmViewControllerProtocol,
-Destination: UIViewController&MvvmViewControllerProtocol> {
+                  Destination: UIViewController&MvvmViewControllerProtocol> {
     public let source: Source
     public let onFollow: (_ sourceModel: Source.ViewModel?) -> Void
-    public let onCompleted: (_ destinationModel: Destination.ViewModel, _ sourceModel: Source.ViewModel) -> Void
 
     public typealias Following = (_ : Source.ViewModel?) -> Void
     public typealias Completing = (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void
@@ -20,11 +19,9 @@ Destination: UIViewController&MvvmViewControllerProtocol> {
     public typealias MakeViewController = () -> Destination
 
     public init(source: Source,
-                onFollow: @escaping Following,
-                onCompleted: @escaping Completing) {
+                onFollow: @escaping Following) {
         self.source = source
         self.onFollow = onFollow
-        self.onCompleted = onCompleted
     }
 
     public func follow() {
@@ -64,9 +61,8 @@ internal extension Flow {
                                        makeViewController: makeDestination)
             }
 
-    return Flow<Source, Destination>(source: source,
-    onFollow: followFlow,
-    onCompleted: onCompleted)
+            return Flow<Source, Destination>(source: source,
+                                             onFollow: followFlow)
     }
 }
 
@@ -79,10 +75,10 @@ extension Flow where Destination: MvvmPresentableViewController {
         let flowController = PresentFlowController<Destination>()
 
         return makeFollowing(flowController: flowController,
-                                       source: source,
-                                       makeViewModel: makeViewModel,
-                                       makeViewController: makeViewController,
-                                       onCompleted: onCompleted)
+                             source: source,
+                             makeViewModel: makeViewModel,
+                             makeViewController: makeViewController,
+                             onCompleted: onCompleted)
     }
 }
 
