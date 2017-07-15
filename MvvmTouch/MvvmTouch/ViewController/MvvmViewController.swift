@@ -24,7 +24,10 @@ open class MvvmViewController<Model: ViewControllerModel>: UIViewController, Mvv
 
     open override func awakeFromNib() {
         super.awakeFromNib()
-        self.view.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    open override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     public var viewModel: Model?
