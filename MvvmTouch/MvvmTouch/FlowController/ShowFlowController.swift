@@ -8,12 +8,10 @@
 
 import UIKit
 
-public class ShowFlowController<Presented, ViewModel> : FlowController
-    where Presented: UIViewController&MvvmViewControllerProtocol,
-          Presented.ViewModel == ViewModel {
-    typealias Model = ViewModel
+public class ShowFlowController<Presented> : FlowController
+    where Presented: UIViewController&MvvmViewControllerProtocol {
     typealias Controller = Presented
-    
+
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
         return "show\(viewModelName)"
@@ -24,7 +22,7 @@ public class ShowFlowController<Presented, ViewModel> : FlowController
     }
 
     public func present(presentingViewController: UIViewController,
-                        makeViewModel: () -> ViewModel,
+                        makeViewModel: () -> Presented.ViewModel,
                         makeViewController: () -> Presented = {Presented.make()}) {
 
         var presentedViewController = makeViewController()

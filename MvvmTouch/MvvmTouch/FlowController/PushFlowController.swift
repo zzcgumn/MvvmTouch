@@ -8,10 +8,8 @@
 
 import UIKit
 
-public class PushFlowController<Presented, ViewModel> : FlowController
-    where Presented: UIViewController&MvvmViewControllerProtocol,
-Presented.ViewModel == ViewModel {
-    typealias Model = ViewModel
+public class PushFlowController<Presented> : FlowController
+    where Presented: UIViewController&MvvmViewControllerProtocol {
     typealias Controller = Presented
 
     static public var sequeIdentifier: String {
@@ -24,7 +22,7 @@ Presented.ViewModel == ViewModel {
     }
 
     public func present(presentingViewController: UIViewController,
-                        makeViewModel: () -> ViewModel,
+                        makeViewModel: () -> Presented.ViewModel,
                         makeViewController: () -> Presented = { Presented.make() }) {
 
         var presentedViewController = makeViewController()

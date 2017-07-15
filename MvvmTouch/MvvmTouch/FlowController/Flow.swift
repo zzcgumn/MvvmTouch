@@ -38,7 +38,7 @@ extension Flow where Destination: MvvmPresentableViewController {
                                  onCompleted: @escaping (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void = {_, _ in }) -> Flow<Source, Destination> {
 
         let followFlow: (_ sourceModel: Source.ViewModel?) -> Void = { sourceModel in
-            let flowController = PresentFlowController<Destination, Destination.ViewModel>()
+            let flowController = PresentFlowController<Destination>()
             let makeDestinationViewModel = { makeViewModel(sourceModel) }
 
             let makeDestination: () -> Destination = {
