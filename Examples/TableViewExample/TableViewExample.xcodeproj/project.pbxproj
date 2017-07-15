@@ -10,7 +10,7 @@
 		5B228E561F1A462C00640DD6 /* MvvmTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B228E431F1A457900640DD6 /* MvvmTouch.framework */; };
 		5B228E571F1A462C00640DD6 /* MvvmTouch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B228E431F1A457900640DD6 /* MvvmTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B985DBC1E47566A0084D3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985DBB1E47566A0084D3FA /* AppDelegate.swift */; };
-		5B985DBE1E47566A0084D3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985DBD1E47566A0084D3FA /* ViewController.swift */; };
+		5B985DBE1E47566A0084D3FA /* ColoredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985DBD1E47566A0084D3FA /* ColoredTableViewController.swift */; };
 		5B985DC11E47566A0084D3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B985DBF1E47566A0084D3FA /* Main.storyboard */; };
 		5B985DC31E47566B0084D3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B985DC21E47566B0084D3FA /* Assets.xcassets */; };
 		5B985DC61E47566B0084D3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B985DC41E47566B0084D3FA /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		5B985DB81E47566A0084D3FA /* TableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B985DBB1E47566A0084D3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B985DBD1E47566A0084D3FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B985DBD1E47566A0084D3FA /* ColoredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColoredTableViewController.swift; path = ../../MvvmExampleUI/ColoredTableViewController.swift; sourceTree = "<group>"; };
 		5B985DC01E47566A0084D3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B985DC21E47566B0084D3FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B985DC51E47566B0084D3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5B985DBB1E47566A0084D3FA /* AppDelegate.swift */,
-				5B985DBD1E47566A0084D3FA /* ViewController.swift */,
+				5B985DBD1E47566A0084D3FA /* ColoredTableViewController.swift */,
 				5B985DBF1E47566A0084D3FA /* Main.storyboard */,
 				5B985DC21E47566B0084D3FA /* Assets.xcassets */,
 				5B985DC41E47566B0084D3FA /* LaunchScreen.storyboard */,
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B985DBE1E47566A0084D3FA /* ViewController.swift in Sources */,
+				5B985DBE1E47566A0084D3FA /* ColoredTableViewController.swift in Sources */,
 				5B985DBC1E47566A0084D3FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

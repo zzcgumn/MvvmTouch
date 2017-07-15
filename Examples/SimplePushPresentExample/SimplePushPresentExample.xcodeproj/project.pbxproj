@@ -67,9 +67,9 @@
 		5B1C8AED1E36959E00F3DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1C8B101E3695AD00F3DD3B /* MvvmTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MvvmTouch.framework; path = "../MvvmTouch/build/Debug-iphoneos/MvvmTouch.framework"; sourceTree = "<group>"; };
 		5B1C8B141E36972200F3DD3B /* MvvmTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MvvmTouch.xcodeproj; path = ../../MvvmTouch/MvvmTouch.xcodeproj; sourceTree = "<group>"; };
-		5BA0B6391E37C5C200A50C41 /* ColoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredViewController.swift; sourceTree = "<group>"; };
-		5BA0B63A1E37C5C200A50C41 /* ColoredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColoredViewController.xib; sourceTree = "<group>"; };
-		5BA0B63D1E37C5E200A50C41 /* ColoredViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredViewControllerModel.swift; sourceTree = "<group>"; };
+		5BA0B6391E37C5C200A50C41 /* ColoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredViewController.swift; path = ../../MvvmExampleUI/ColoredViewController.swift; sourceTree = "<group>"; };
+		5BA0B63A1E37C5C200A50C41 /* ColoredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColoredViewController.xib; path = ../../MvvmExampleUI/ColoredViewController.xib; sourceTree = "<group>"; };
+		5BA0B63D1E37C5E200A50C41 /* ColoredViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredViewControllerModel.swift; path = ../../MvvmExampleUI/ColoredViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

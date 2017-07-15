@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColoredTableViewController.swift
 //  TableViewExample
 //
 //  Created by Martin Nygren on 05/02/2017.
@@ -35,7 +35,7 @@ class ColoredCellSection: MvvmTableViewSection<ColoredCellModel, ColoredCellType
     }
 }
 
-class ViewController: MvvmCellModelTableViewController {
+class ColoredTableViewController: MvvmCellModelTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
