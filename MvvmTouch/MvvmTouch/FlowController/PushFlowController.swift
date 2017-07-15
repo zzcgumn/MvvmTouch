@@ -9,11 +9,11 @@
 import UIKit
 
 public class PushFlowController<Presented, ViewModel> : FlowController
-where Presented: UIViewController&MvvmViewControllerProtocol,
-      Presented.ViewModel == ViewModel {
+    where Presented: UIViewController&MvvmViewControllerProtocol,
+Presented.ViewModel == ViewModel {
     typealias Model = ViewModel
     typealias Controller = Presented
-    
+
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
         return "push\(viewModelName)"

@@ -17,18 +17,17 @@
 		5BF5E47F1F0D9B5E004FE921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E47D1F0D9B5E004FE921 /* Main.storyboard */; };
 		5BF5E4811F0D9B5E004FE921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E4801F0D9B5E004FE921 /* Assets.xcassets */; };
 		5BF5E4841F0D9B5E004FE921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5E4821F0D9B5E004FE921 /* LaunchScreen.storyboard */; };
-		5BF5E4971F0EEB6E004FE921 /* MvvmTouch.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5BF5E4921F0EEB24004FE921 /* PBXContainerItemProxy */ = {
+		5B228E4E1F1A457900640DD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5B1C8A751E36949900F3DD3B;
 			remoteInfo = MvvmTouch;
 		};
-		5BF5E4941F0EEB24004FE921 /* PBXContainerItemProxy */ = {
+		5B228E501F1A457900640DD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
 			proxyType = 2;
@@ -44,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5BF5E4971F0EEB6E004FE921 /* MvvmTouch.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +61,7 @@
 		5BF5E4801F0D9B5E004FE921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF5E4831F0D9B5E004FE921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF5E4851F0D9B5E004FE921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MvvmTouch.xcodeproj; path = ../../MvvmTouch.xcodeproj; sourceTree = "<group>"; };
+		5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MvvmTouch.xcodeproj; path = ../../../MvvmTouch/MvvmTouch.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B228E3E1F1A457900640DD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B228E4F1F1A457900640DD6 /* MvvmTouch.framework */,
+				5B228E511F1A457900640DD6 /* MvvmTouchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5BF5E46D1F0D9B5E004FE921 = {
 			isa = PBXGroup;
 			children = (
@@ -110,15 +117,6 @@
 				5B228E2D1F18239700640DD6 /* ColoredTableViewController.xib */,
 			);
 			path = FlowExample;
-			sourceTree = "<group>";
-		};
-		5BF5E48E1F0EEB24004FE921 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */,
-				5BF5E4951F0EEB24004FE921 /* MvvmTouchTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +168,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5BF5E48E1F0EEB24004FE921 /* Products */;
+					ProductGroup = 5B228E3E1F1A457900640DD6 /* Products */;
 					ProjectRef = 5BF5E48D1F0EEB24004FE921 /* MvvmTouch.xcodeproj */;
 				},
 			);
@@ -182,18 +180,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5BF5E4931F0EEB24004FE921 /* MvvmTouch.framework */ = {
+		5B228E4F1F1A457900640DD6 /* MvvmTouch.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MvvmTouch.framework;
-			remoteRef = 5BF5E4921F0EEB24004FE921 /* PBXContainerItemProxy */;
+			remoteRef = 5B228E4E1F1A457900640DD6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5BF5E4951F0EEB24004FE921 /* MvvmTouchTests.xctest */ = {
+		5B228E511F1A457900640DD6 /* MvvmTouchTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MvvmTouchTests.xctest;
-			remoteRef = 5BF5E4941F0EEB24004FE921 /* PBXContainerItemProxy */;
+			remoteRef = 5B228E501F1A457900640DD6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
