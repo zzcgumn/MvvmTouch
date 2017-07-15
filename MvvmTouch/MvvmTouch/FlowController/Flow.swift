@@ -15,11 +15,15 @@ Destination: UIViewController&MvvmViewControllerProtocol> {
     public let onFollow: (_ sourceModel: Source.ViewModel?) -> Void
     public let onCompleted: (_ destinationModel: Destination.ViewModel, _ sourceModel: Source.ViewModel) -> Void
 
+    public typealias Following = (_ : Source.ViewModel?) -> Void
+    public typealias Completing = (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void
+    public typealias MakeViewModel = (_ sourceModel: Source.ViewModel?) -> Destination.ViewModel
+    public typealias MakeViewController = () -> Destination
+
     public init(source: Source,
                 destination: Destination,
-                onFollow: @escaping (_ : Source.ViewModel?) -> Void = { _ in  },
-                onCompleted: @escaping (_ destinationModel: Destination.ViewModel, _ sourceModel: Source.ViewModel) -> Void
-        = {_, _ in   }) {
+                onFollow: @escaping Following,
+                onCompleted: @escaping Completing) {
         self.source = source
         self.destination = destination
         self.onFollow = onFollow
@@ -33,9 +37,9 @@ Destination: UIViewController&MvvmViewControllerProtocol> {
 
 extension Flow where Destination: MvvmPresentableViewController {
     public static func modalFlow(source: Source,
-                                 makeViewModel: @escaping (_ sourceModel: Source.ViewModel?) -> Destination.ViewModel = { _ in Destination.ViewModel()},
-                                 makeViewController: @escaping () -> Destination = { return Destination.make() },
-                                 onCompleted: @escaping (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void = {_, _ in }) -> Flow<Source, Destination> {
+                                 makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
+                                 makeViewController: @escaping MakeViewController = { return Destination.make() },
+                                 onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
 
         let followFlow: (_ sourceModel: Source.ViewModel?) -> Void = { sourceModel in
             let flowController = PresentFlowController<Destination>()
