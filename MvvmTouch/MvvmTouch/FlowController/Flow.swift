@@ -47,7 +47,51 @@ extension Flow where Destination: MvvmPresentableViewController {
 
             let makeDestination: () -> Destination = {
                 var vc = makeViewController()
-                if vc.dismissAction == nil {
+                if let currentAction = vc.dismissAction {
+                    vc.dismissAction = {
+                        onCompleted(vc.viewModel, source.viewModel)
+                        currentAction()
+                    }
+                } else {
+                    vc.dismissAction = {
+                        onCompleted(vc.viewModel, source.viewModel)
+                        source.dismiss(animated: true, completion: nil)
+                    }
+                }
+
+                return vc
+            }
+
+            flowController.present(presentingViewController: source,
+                                   makeViewModel: makeDestinationViewModel,
+                                   makeViewController: makeDestination)
+        }
+
+        return Flow<Source, Destination>(source: source,
+                                         destination: Destination.make(),
+                                         onFollow: followFlow,
+                                         onCompleted: onCompleted)
+    }
+}
+
+extension Flow {
+    public static func pushFlow(source: Source,
+                                 makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
+                                 makeViewController: @escaping MakeViewController = { return Destination.make() },
+                                 onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
+        
+        let followFlow: (_ sourceModel: Source.ViewModel?) -> Void = { sourceModel in
+            let flowController = PushFlowController<Destination>()
+            let makeDestinationViewModel = { makeViewModel(sourceModel) }
+
+            let makeDestination: () -> Destination = {
+                var vc = makeViewController()
+                if let currentAction = vc.dismissAction {
+                    vc.dismissAction = {
+                        onCompleted(vc.viewModel, source.viewModel)
+                        currentAction()
+                    }
+                } else {
                     vc.dismissAction = {
                         onCompleted(vc.viewModel, source.viewModel)
                         source.dismiss(animated: true, completion: nil)

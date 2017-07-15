@@ -16,21 +16,35 @@ class RootViewControllerModel: ViewControllerModel {
 class ViewController: MvvmViewController<RootViewControllerModel> {
 
     var chooseColorFlow: Flow<ViewController, ColoredViewController>?
+    var chooseImageFlow: Flow<ViewController, ColoredViewController>?
 
-    @objc func action(sender: UIButton!) {
+    @objc func colorAction(sender: UIButton!) {
         chooseColorFlow?.follow()
     }
 
+    @objc func imageAction(sender: UIButton!) {
+        chooseImageFlow?.follow()
+    }
+
     @IBOutlet var selectColorButton: UIButton!
+    @IBOutlet var selectImageButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         chooseColorFlow = Flow<ViewController, ColoredViewController>.modalFlow(
             source: self,
             makeViewModel: {_ in return ColoredViewControllerModel(backgroundColor: .green) }
         )
 
-        selectColorButton.addTarget(self, action: #selector(action(sender:)), for: .touchUpInside)
+        chooseImageFlow = Flow<ViewController, ColoredViewController>.pushFlow(
+            source: self,
+            makeViewModel: {_ in return ColoredViewControllerModel(backgroundColor: .brown) }
+        )
+
+        selectColorButton.addTarget(self, action: #selector(colorAction(sender:)), for: .touchUpInside)
+        selectImageButton.addTarget(self, action: #selector(imageAction(sender:)), for: .touchUpInside)
+
     }
 
 }
