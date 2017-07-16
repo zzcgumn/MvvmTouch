@@ -66,7 +66,7 @@ internal extension Flow {
     }
 }
 
-extension Flow where Destination: MvvmPresentableViewController {
+public extension Flow where Destination: MvvmPresentableViewController {
     public static func modalFlow(source: Source,
                                  makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
                                  makeViewController: @escaping MakeViewController = { return Destination.make() },
@@ -82,7 +82,7 @@ extension Flow where Destination: MvvmPresentableViewController {
     }
 }
 
-extension Flow {
+public extension Flow {
     public static func pushFlow(source: Source,
                                 makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
                                 makeViewController: @escaping MakeViewController = { return Destination.make() },

@@ -10,13 +10,11 @@ import UIKit
 
 extension UIViewController {
 
-    // TODO: Should be an extension on UIView.
     func makeFillViewConstraints(subView: UIView) -> [NSLayoutConstraint] {
-
         let margins = view.layoutMarginsGuide
         let allConstraints = [
-            subView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
-            subView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
+            subView.topAnchor.constraint(equalTo: margins.topAnchor),
+            subView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
             subView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             subView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
         ]
