@@ -16,5 +16,5 @@ protocol FlowController {
 
     func present(presentingViewController: UIViewController,
                  makeViewModel: () -> Controller.ViewModel,
-                 makeViewController: () -> Controller)
+                 makeViewController: (Controller.ViewModel) -> Controller)
 }

@@ -20,7 +20,7 @@ where Model: TableViewControllerModel {
 
     open override func awakeFromNib() {
         super.awakeFromNib()
-        self.view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -34,6 +34,6 @@ where Model: TableViewControllerModel {
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {
-        return makeFillViewConstraints(subView: tableView)
+        return view.makeFillViewConstraints(tableView)
     }
 }

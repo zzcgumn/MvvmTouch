@@ -11,6 +11,21 @@ import MvvmTouch
 
 class RootViewControllerModel: ViewControllerModel {
     public required init() { }
+
+    func colorFlow<T>(source: T) -> Flow<T, ColoredViewController>
+        where T: UIViewController&MvvmViewControllerProtocol {
+            return .modalFlow(
+                source: source,
+                makeViewModel: { _ in ColoredViewControllerModel(backgroundColor: .green) }
+            )
+    }
+
+    func imageFlow<T>(source: T) -> Flow<T, ColoredViewController> where T: UIViewController&MvvmViewControllerProtocol {
+        return .pushFlow(
+            source: source,
+            makeViewModel: { _ in ColoredViewControllerModel(backgroundColor: .brown) }
+        )
+    }
 }
 
 class ViewController: MvvmViewController<RootViewControllerModel> {
@@ -19,11 +34,11 @@ class ViewController: MvvmViewController<RootViewControllerModel> {
     var chooseImageFlow: Flow<ViewController, ColoredViewController>?
 
     @objc func colorAction(sender: UIButton!) {
-        chooseColorFlow?.follow()
+        viewModel?.colorFlow(source: self).follow()
     }
 
     @objc func imageAction(sender: UIButton!) {
-        chooseImageFlow?.follow()
+        viewModel?.imageFlow(source: self).follow()
     }
 
     @IBOutlet var selectColorButton: UIButton!
@@ -32,19 +47,10 @@ class ViewController: MvvmViewController<RootViewControllerModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chooseColorFlow = Flow<ViewController, ColoredViewController>.modalFlow(
-            source: self,
-            makeViewModel: {_ in return ColoredViewControllerModel(backgroundColor: .green) }
-        )
-
-        chooseImageFlow = Flow<ViewController, ColoredViewController>.pushFlow(
-            source: self,
-            makeViewModel: {_ in return ColoredViewControllerModel(backgroundColor: .brown) }
-        )
+        viewModel = RootViewControllerModel()
 
         selectColorButton.addTarget(self, action: #selector(colorAction(sender:)), for: .touchUpInside)
         selectImageButton.addTarget(self, action: #selector(imageAction(sender:)), for: .touchUpInside)
-
     }
 
 }

@@ -23,12 +23,10 @@ public class ShowFlowController<Presented> : FlowController
 
     public func present(presentingViewController: UIViewController,
                         makeViewModel: () -> Presented.ViewModel,
-                        makeViewController: () -> Presented = {Presented.make()}) {
+                        makeViewController: (Presented.ViewModel) -> Presented) {
 
-        var presentedViewController = makeViewController()
-
-        let vm = makeViewModel()
-        presentedViewController.viewModel = vm
+        let viewModel = makeViewModel()
+        let presentedViewController = makeViewController(viewModel)
 
         let seque = UIStoryboardSegue(identifier: ShowFlowController.sequeIdentifier,
                                       source: presentingViewController,

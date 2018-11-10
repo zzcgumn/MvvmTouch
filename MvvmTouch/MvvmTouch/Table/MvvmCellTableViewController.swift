@@ -39,7 +39,7 @@ open class MvvmCellModelTableViewController: MvvmViewController<MvvmUITableViewM
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {
-        return makeFillViewConstraints(subView: tableView)
+        return view.makeFillViewConstraints(tableView)
     }
 
 }

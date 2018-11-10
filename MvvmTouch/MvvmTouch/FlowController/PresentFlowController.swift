@@ -21,19 +21,19 @@ where Presented: UIViewController&MvvmPresentableViewController&MvvmViewControll
 
     }
 
-    public func present(presentingViewController: UIViewController,
-                        makeViewModel: () -> Presented.ViewModel,
-                        makeViewController: () -> Presented = {Presented.make()}) {
+    public func present(
+        presentingViewController: UIViewController,
+        makeViewModel: () -> Presented.ViewModel,
+        makeViewController: (Presented.ViewModel) -> Presented
+        ) {
 
-        var presentedViewController = makeViewController()
+        let vm = makeViewModel()
+        var presentedViewController = makeViewController(vm)
         if presentedViewController.dismissAction == nil {
             presentedViewController.dismissAction = {
                 presentingViewController.dismiss(animated: true, completion: .none)
             }
         }
-
-        let vm = makeViewModel()
-        presentedViewController.viewModel = vm
 
         presentedViewController.showCloseButton = true
 

@@ -9,14 +9,14 @@
 import UIKit
 
 public class Flow<Source: UIViewController&MvvmViewControllerProtocol,
-                  Destination: UIViewController&MvvmViewControllerProtocol> {
+Destination: UIViewController&MvvmViewControllerProtocol> {
     public let source: Source
     public let onFollow: (_ sourceModel: Source.ViewModel?) -> Void
 
     public typealias Following = (_ : Source.ViewModel?) -> Void
     public typealias Completing = (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void
     public typealias MakeViewModel = (_ sourceModel: Source.ViewModel?) -> Destination.ViewModel
-    public typealias MakeViewController = () -> Destination
+    public typealias MakeViewController = (Destination.ViewModel) -> Destination
 
     public init(source: Source,
                 onFollow: @escaping Following) {
@@ -39,21 +39,22 @@ internal extension Flow {
             let followFlow: (_ sourceModel: Source.ViewModel?) -> Void = { sourceModel in
                 let makeDestinationViewModel = { makeViewModel(sourceModel) }
 
-                let makeDestination: () -> Destination = {
-                    var vc = makeViewController()
-                    if let currentAction = vc.dismissAction {
-                        vc.dismissAction = {
-                            onCompleted(vc.viewModel, source.viewModel)
+                let makeDestination: (Destination.ViewModel) -> Destination = { viewModel in
+                    var viewController = makeViewController(viewModel)
+
+                    if let currentAction = viewController.dismissAction {
+                        viewController.dismissAction = {
+                            onCompleted(viewController.viewModel, source.viewModel)
                             currentAction()
                         }
                     } else {
-                        vc.dismissAction = {
-                            onCompleted(vc.viewModel, source.viewModel)
+                        viewController.dismissAction = {
+                            onCompleted(viewController.viewModel, source.viewModel)
                             source.dismiss(animated: true, completion: nil)
                         }
                     }
 
-                    return vc
+                    return viewController
                 }
 
                 flowController.present(presentingViewController: source,
@@ -68,8 +69,8 @@ internal extension Flow {
 
 public extension Flow where Destination: MvvmPresentableViewController {
     public static func modalFlow(source: Source,
-                                 makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
-                                 makeViewController: @escaping MakeViewController = { return Destination.make() },
+                                 makeViewModel: @escaping MakeViewModel,
+                                 makeViewController: @escaping MakeViewController = defaultMakeViewController,
                                  onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
 
         let flowController = PresentFlowController<Destination>()
@@ -82,10 +83,25 @@ public extension Flow where Destination: MvvmPresentableViewController {
     }
 }
 
+public extension Flow where Destination: MvvmPresentableViewController, Destination.ViewModel: DefaultInitialisable {
+    public static func modalFlow(source: Source,
+                                 makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                                 onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
+
+        let flowController = PresentFlowController<Destination>()
+
+        return makeFollowing(flowController: flowController,
+                             source: source,
+                             makeViewModel: { _ in Destination.ViewModel() },
+                             makeViewController: makeViewController,
+                             onCompleted: onCompleted)
+    }
+}
+
 public extension Flow {
     public static func pushFlow(source: Source,
-                                makeViewModel: @escaping MakeViewModel = { _ in Destination.ViewModel()},
-                                makeViewController: @escaping MakeViewController = { return Destination.make() },
+                                makeViewModel: @escaping MakeViewModel,
+                                makeViewController: @escaping MakeViewController = defaultMakeViewController,
                                 onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
 
         let flowController = PushFlowController<Destination>()
@@ -93,6 +109,21 @@ public extension Flow {
         return makeFollowing(flowController: flowController,
                              source: source,
                              makeViewModel: makeViewModel,
+                             makeViewController: makeViewController,
+                             onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where Destination: MvvmPresentableViewController, Destination.ViewModel: DefaultInitialisable {
+    public static func pushFlow(source: Source,
+                                makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                                onCompleted: @escaping Completing = {_, _ in }) -> Flow<Source, Destination> {
+
+        let flowController = PushFlowController<Destination>()
+
+        return makeFollowing(flowController: flowController,
+                             source: source,
+                             makeViewModel: { _ in Destination.ViewModel() },
                              makeViewController: makeViewController,
                              onCompleted: onCompleted)
     }
