@@ -139,7 +139,7 @@ open class MvvmUITableViewDataSource: NSObject, MvvmTableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView,
-                          commit editingStyle: UITableViewCellEditingStyle,
+                          commit editingStyle: UITableViewCell.EditingStyle,
                           forRowAt indexPath: IndexPath) {
         fatalError("MvvmUITableViewDataSource must be subclassed to support editing rows.")
     }

@@ -24,11 +24,11 @@ where Presented: UIViewController&MvvmPresentableViewController&MvvmViewControll
     public func present(
         presentingViewController: UIViewController,
         makeViewModel: () -> Presented.ViewModel,
-        makeViewController: (Presented.ViewModel) -> Presented
+        makeViewController: (Presented.ViewModel) -> Presented = defaultMakeViewController
         ) {
 
-        let vm = makeViewModel()
-        var presentedViewController = makeViewController(vm)
+        let viewModel = makeViewModel()
+        var presentedViewController = makeViewController(viewModel)
         if presentedViewController.dismissAction == nil {
             presentedViewController.dismissAction = {
                 presentingViewController.dismiss(animated: true, completion: .none)

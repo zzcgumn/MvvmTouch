@@ -10,9 +10,9 @@ import UIKit
 
 public protocol MvvmViewControllerProtocol {
     associatedtype ViewModel: ViewControllerModel
+
     var viewModel: ViewModel? { get set }
     var dismissAction: (() -> Void)? { get set }
-    static func make() -> Self
 }
 
 public protocol MvvmPresentableViewController {
@@ -48,10 +48,6 @@ open class MvvmViewController<Model: ViewControllerModel>: UIViewController, Mvv
                 doHideCloseButton()
             }
         }
-    }
-
-    open static func make() -> Self {
-        return self.init()
     }
 }
 

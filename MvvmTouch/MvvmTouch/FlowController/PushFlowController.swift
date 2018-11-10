@@ -9,7 +9,7 @@
 import UIKit
 
 public class PushFlowController<Presented> : FlowController
-    where Presented: UIViewController&MvvmViewControllerProtocol {
+where Presented: UIViewController&MvvmViewControllerProtocol {
     typealias Controller = Presented
 
     static public var sequeIdentifier: String {
@@ -17,14 +17,12 @@ public class PushFlowController<Presented> : FlowController
         return "push\(viewModelName)"
     }
 
-    public init() {
-
-    }
+    public init() { }
 
     public func present(
         presentingViewController: UIViewController,
-                        makeViewModel: () -> Presented.ViewModel,
-                        makeViewController: (Presented.ViewModel) -> Presented
+        makeViewModel: () -> Presented.ViewModel,
+        makeViewController: (Presented.ViewModel) -> Presented = defaultMakeViewController
         ) {
 
         let viewModel = makeViewModel()
