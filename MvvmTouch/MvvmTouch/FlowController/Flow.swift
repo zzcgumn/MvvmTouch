@@ -12,6 +12,7 @@ public class Flow<Source: UIViewController&MvvmViewControllerProtocol,
 Destination: UIViewController&MvvmViewControllerProtocol> {
     public let source: Source
     public let onFollow: (_ sourceModel: Source.ViewModel?) -> Void
+    public let sequeIdentifier: String
 
     public typealias Following = (_ : Source.ViewModel?) -> Void
     public typealias Completing = (_ destinationModel: Destination.ViewModel?, _ sourceModel: Source.ViewModel?) -> Void
@@ -19,9 +20,11 @@ Destination: UIViewController&MvvmViewControllerProtocol> {
     public typealias MakeViewController = (Destination.ViewModel) -> Destination
 
     public init(source: Source,
-                onFollow: @escaping Following) {
+                onFollow: @escaping Following,
+                sequeIdentifier: String) {
         self.source = source
         self.onFollow = onFollow
+        self.sequeIdentifier = sequeIdentifier
     }
 
     public func follow() {
@@ -63,7 +66,8 @@ internal extension Flow {
             }
 
             return Flow<Source, Destination>(source: source,
-                                             onFollow: followFlow)
+                                             onFollow: followFlow,
+                                             sequeIdentifier: "")
     }
 }
 

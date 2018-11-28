@@ -30,6 +30,9 @@
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
 		5BCFE4881F1B6D3C00691E16 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFE4871F1B6D3C00691E16 /* UIView+Constraints.swift */; };
 		5BD6C1B62196519C00E8D322 /* DefaultBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6C1B52196519C00E8D322 /* DefaultBuilders.swift */; };
+		BA4C599B21AF0A5400163A91 /* Flow+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599A21AF0A5400163A91 /* Flow+Push.swift */; };
+		BA4C599D21AF0D8C00163A91 /* Flow+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */; };
+		BA4C599F21AF109300163A91 /* Flow+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599E21AF109300163A91 /* Flow+Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
 		5BCFE4871F1B6D3C00691E16 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		5BD6C1B52196519C00E8D322 /* DefaultBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBuilders.swift; sourceTree = "<group>"; };
+		BA4C599A21AF0A5400163A91 /* Flow+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Push.swift"; sourceTree = "<group>"; };
+		BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Present.swift"; sourceTree = "<group>"; };
+		BA4C599E21AF109300163A91 /* Flow+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Show.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				5B4C38101F0D945800F4289A /* Flow.swift */,
+				BA4C599A21AF0A5400163A91 /* Flow+Push.swift */,
+				BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */,
+				BA4C599E21AF109300163A91 /* Flow+Show.swift */,
 				5B5DC4A81E3D157800558077 /* FlowController.swift */,
 				5B5DC4A91E3D157800558077 /* PresentFlowController.swift */,
 				5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */,
@@ -323,6 +332,7 @@
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
 				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,
 				5BCFE4881F1B6D3C00691E16 /* UIView+Constraints.swift in Sources */,
+				BA4C599F21AF109300163A91 /* Flow+Show.swift in Sources */,
 				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,
 				5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */,
 				5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */,
@@ -333,7 +343,9 @@
 				5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */,
 				5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */,
 				5B4D29D41E493B8400F19FF4 /* MvvmCellTableViewController.swift in Sources */,
+				BA4C599B21AF0A5400163A91 /* Flow+Push.swift in Sources */,
 				5B63071F1E5096C900A2E349 /* MvvmTableViewDataSource.swift in Sources */,
+				BA4C599D21AF0D8C00163A91 /* Flow+Present.swift in Sources */,
 				5B84FFD21F1555390032DC94 /* PresentFlowController.swift in Sources */,
 				5BD6C1B62196519C00E8D322 /* DefaultBuilders.swift in Sources */,
 			);

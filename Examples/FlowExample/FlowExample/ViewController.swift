@@ -14,14 +14,14 @@ class RootViewControllerModel: ViewControllerModel {
 
     func colorFlow<T>(source: T) -> Flow<T, ColoredViewController>
         where T: UIViewController&MvvmViewControllerProtocol {
-            return .modalFlow(
+            return .present(
                 source: source,
                 makeViewModel: { _ in ColoredViewControllerModel(backgroundColor: .green) }
             )
     }
 
     func imageFlow<T>(source: T) -> Flow<T, ColoredViewController> where T: UIViewController&MvvmViewControllerProtocol {
-        return .pushFlow(
+        return .push(
             source: source,
             makeViewModel: { _ in ColoredViewControllerModel(backgroundColor: .brown) }
         )
