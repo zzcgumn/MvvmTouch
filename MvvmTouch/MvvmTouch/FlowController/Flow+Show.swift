@@ -29,7 +29,6 @@ extension Flow {
                     onCompleted(presentedViewController.viewModel, source.viewModel)
                 }
             }
-            
 
             let seque = UIStoryboardSegue(identifier: sequeIdentifier,
                                           source: source,
@@ -43,5 +42,17 @@ extension Flow {
         return Flow(source: source,
                     onFollow: followFlow,
                     sequeIdentifier: sequeIdentifier)
+    }
+}
+
+public extension Flow where Destination.ViewModel: DefaultInitialisable {
+    public static func show(source: Source,
+                            makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return push(source: source,
+                    makeViewModel: { _ in Destination.ViewModel() },
+                    makeViewController: makeViewController,
+                    onCompleted: onCompleted)
     }
 }

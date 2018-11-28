@@ -46,3 +46,15 @@ extension Flow {
                     sequeIdentifier: sequeIdentifier)
     }
 }
+
+public extension Flow where Destination.ViewModel: DefaultInitialisable {
+    public static func push(source: Source,
+                            makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return push(source: source,
+                    makeViewModel: { _ in Destination.ViewModel() },
+                    makeViewController: makeViewController,
+                    onCompleted: onCompleted)
+    }
+}

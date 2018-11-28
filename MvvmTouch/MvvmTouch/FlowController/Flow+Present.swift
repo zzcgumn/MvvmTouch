@@ -50,3 +50,15 @@ extension Flow where Destination: MvvmPresentableViewController {
                     sequeIdentifier: sequeIdentifier)
     }
 }
+
+public extension Flow where Destination: MvvmPresentableViewController, Destination.ViewModel: DefaultInitialisable {
+    public static func present(source: Source,
+                               makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                               onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return present(source: source,
+                       makeViewModel: { _ in Destination.ViewModel() },
+                       makeViewController: makeViewController,
+                       onCompleted: onCompleted)
+    }
+}
