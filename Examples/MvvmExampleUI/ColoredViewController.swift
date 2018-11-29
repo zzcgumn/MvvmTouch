@@ -9,7 +9,7 @@
 import UIKit
 import MvvmTouch
 
-class ColoredViewController: MvvmViewController<ColoredViewControllerModel> {
+class ColoredViewController: MvvmViewController<ColoredViewControllerModel>, DefaultInitialisable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

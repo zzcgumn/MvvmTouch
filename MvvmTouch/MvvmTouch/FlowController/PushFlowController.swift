@@ -22,7 +22,7 @@ where Presented: UIViewController&MvvmViewControllerProtocol {
     public func present(
         presentingViewController: UIViewController,
         makeViewModel: () -> Presented.ViewModel,
-        makeViewController: (Presented.ViewModel) -> Presented = defaultMakeViewController
+        makeViewController: (Presented.ViewModel) -> Presented
         ) {
 
         let viewModel = makeViewModel()

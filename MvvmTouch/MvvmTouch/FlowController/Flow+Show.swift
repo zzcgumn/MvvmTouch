@@ -9,10 +9,10 @@
 import Foundation
 
 extension Flow {
-    public func show(source: Source,
-                     makeViewModel: @escaping MakeViewModel,
-                     makeViewController: @escaping MakeViewController = defaultMakeViewController,
-                     onCompleted: @escaping Completing = { _, _ in } ) -> Flow<Source, Destination> {
+    public static func show(source: Source,
+                            makeViewModel: @escaping MakeViewModel,
+                            makeViewController: @escaping MakeViewController,
+                            onCompleted: @escaping Completing = { _, _ in } ) -> Flow<Source, Destination> {
         let sequeIdentifier = "\(Source.self):show:\(Destination.self)"
 
         let followFlow: (_ sourceModel: Source.ViewModel?) -> Void = { sourceModel in
@@ -45,14 +45,41 @@ extension Flow {
     }
 }
 
-public extension Flow where Destination.ViewModel: DefaultInitialisable {
+public extension Flow where
+Destination.ViewModel: DefaultInitialisable {
     public static func show(source: Source,
-                            makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                            makeViewController: @escaping MakeViewController,
                             onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
 
-        return push(source: source,
+        return show(source: source,
                     makeViewModel: { _ in Destination.ViewModel() },
                     makeViewController: makeViewController,
+                    onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where
+Destination: DefaultInitialisable {
+    public static func show(source: Source,
+                            makeViewModel: @escaping MakeViewModel,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return show(source: source,
+                    makeViewModel: makeViewModel,
+                    makeViewController: defaultMakeViewController,
+                    onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where
+Destination: DefaultInitialisable,
+Destination.ViewModel: DefaultInitialisable  {
+    public static func show(source: Source,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return show(source: source,
+                    makeViewModel: { _ in Destination.ViewModel() },
+                    makeViewController: defaultMakeViewController,
                     onCompleted: onCompleted)
     }
 }

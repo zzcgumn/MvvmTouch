@@ -11,7 +11,7 @@ import UIKit
 extension Flow {
     public static func push(source: Source,
                             makeViewModel: @escaping MakeViewModel,
-                            makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                            makeViewController: @escaping MakeViewController,
                             onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
         let sequeIdentifier = "\(Source.self):push:\(Destination.self)"
 
@@ -47,14 +47,40 @@ extension Flow {
     }
 }
 
-public extension Flow where Destination.ViewModel: DefaultInitialisable {
+public extension Flow where
+Destination.ViewModel: DefaultInitialisable {
     public static func push(source: Source,
-                            makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                            makeViewController: @escaping MakeViewController,
                             onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
 
         return push(source: source,
                     makeViewModel: { _ in Destination.ViewModel() },
                     makeViewController: makeViewController,
+                    onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where Destination: DefaultInitialisable {
+    public static func push(source: Source,
+                            makeViewModel: @escaping MakeViewModel,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return push(source: source,
+                    makeViewModel: makeViewModel,
+                    makeViewController: defaultMakeViewController,
+                    onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where
+Destination: DefaultInitialisable,
+Destination.ViewModel: DefaultInitialisable  {
+    public static func push(source: Source,
+                            onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return push(source: source,
+                    makeViewModel: { _ in Destination.ViewModel() },
+                    makeViewController: defaultMakeViewController,
                     onCompleted: onCompleted)
     }
 }

@@ -8,10 +8,11 @@
 
 import UIKit
 
-extension Flow where Destination: MvvmPresentableViewController {
+extension Flow where
+Destination: MvvmPresentableViewController {
     public static func present(source: Source,
                                makeViewModel: @escaping MakeViewModel,
-                               makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                               makeViewController: @escaping MakeViewController,
                                onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
         let sequeIdentifier = "\(Source.self):present:\(Destination.self)"
 
@@ -51,14 +52,44 @@ extension Flow where Destination: MvvmPresentableViewController {
     }
 }
 
-public extension Flow where Destination: MvvmPresentableViewController, Destination.ViewModel: DefaultInitialisable {
+public extension Flow where
+Destination: MvvmPresentableViewController,
+Destination.ViewModel: DefaultInitialisable {
     public static func present(source: Source,
-                               makeViewController: @escaping MakeViewController = defaultMakeViewController,
+                               makeViewController: @escaping MakeViewController,
                                onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
 
         return present(source: source,
                        makeViewModel: { _ in Destination.ViewModel() },
                        makeViewController: makeViewController,
+                       onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where
+Destination: MvvmPresentableViewController,
+Destination: DefaultInitialisable {
+    public static func present(source: Source,
+                               makeViewModel: @escaping MakeViewModel,
+                               onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return present(source: source,
+                       makeViewModel: makeViewModel,
+                       makeViewController: defaultMakeViewController,
+                       onCompleted: onCompleted)
+    }
+}
+
+public extension Flow where
+Destination: MvvmPresentableViewController,
+Destination: DefaultInitialisable,
+Destination.ViewModel: DefaultInitialisable  {
+    public static func present(source: Source,
+                               onCompleted: @escaping Completing = { _, _ in }) -> Flow<Source, Destination> {
+
+        return present(source: source,
+                       makeViewModel: { _ in Destination.ViewModel() },
+                       makeViewController: defaultMakeViewController,
                        onCompleted: onCompleted)
     }
 }

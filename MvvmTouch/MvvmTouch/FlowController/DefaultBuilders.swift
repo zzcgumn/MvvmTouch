@@ -8,8 +8,12 @@
 
 import Foundation
 
+public protocol DefaultInitialisable {
+    init()
+}
+
 public func defaultMakeViewController<T>(viewModel: T.ViewModel) -> T
-    where T: UIViewController&MvvmViewControllerProtocol {
+    where T: UIViewController&MvvmViewControllerProtocol&DefaultInitialisable {
     var viewController = T()
     viewController.viewModel = viewModel
 
