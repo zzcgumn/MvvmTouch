@@ -8,10 +8,14 @@
 
 import UIKit
 
-/** Connects a UITableView with a MvvmTableViewDataSource */
-open class MvvmCellModelTableViewController: UIViewController {
-    public let tableView = UITableView()
+public class MvvmUITableViewModel: ViewControllerModel {
     public let dataSource = MvvmUITableViewDataSource(sections: [])
+    public required init() { }
+}
+
+/** Connects a UITableView with a MvvmTableViewDataSource */
+open class MvvmCellModelTableViewController: MvvmViewController<MvvmUITableViewModel> {
+    public let tableView = UITableView()
 
     open override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,17 +25,21 @@ open class MvvmCellModelTableViewController: UIViewController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.dataSource = dataSource
+        if viewModel == nil {
+            viewModel = MvvmUITableViewModel()
+        }
+        tableView.dataSource = viewModel?.dataSource
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         view.addConstraints(constraintsForTableView())
+
+        view.setNeedsLayout()
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {
-        return makeFillViewConstraints(subView: tableView)
+        return view.makeFillViewConstraints(tableView)
     }
 
 }

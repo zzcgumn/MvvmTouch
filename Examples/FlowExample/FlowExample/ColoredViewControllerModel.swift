@@ -13,4 +13,11 @@ struct ColoredViewControllerModel: ViewControllerModel {
 
     let backgroundColor: UIColor
 
+    init(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+
+    init() {
+        backgroundColor = .clear
+    }
 }

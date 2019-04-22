@@ -8,8 +8,9 @@
 
 import UIKit
 
-public class PresentFlowController<Presented, ViewModel> : FlowController
-where Presented: MvvmViewController<ViewModel> {
+public class PresentFlowController<Presented> : FlowController
+where Presented: UIViewController&MvvmPresentableViewController&MvvmViewControllerProtocol {
+    typealias Controller = Presented
 
     static var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
@@ -20,17 +21,19 @@ where Presented: MvvmViewController<ViewModel> {
 
     }
 
-    public func present(presentingViewController: UIViewController,
-                        makeViewModel: () -> ViewModel,
-                        makeViewController: () -> Presented = {Presented()}) {
+    public func present(
+        presentingViewController: UIViewController,
+        makeViewModel: () -> Presented.ViewModel,
+        makeViewController: (Presented.ViewModel) -> Presented
+        ) {
 
-        let presentedViewController = makeViewController()
-        presentedViewController.dismissAction = {
-            presentingViewController.dismiss(animated: true, completion: .none)
+        let viewModel = makeViewModel()
+        var presentedViewController = makeViewController(viewModel)
+        if presentedViewController.dismissAction == nil {
+            presentedViewController.dismissAction = {
+                presentingViewController.dismiss(animated: true, completion: .none)
+            }
         }
-
-        let vm = makeViewModel()
-        presentedViewController.viewModel = vm
 
         presentedViewController.showCloseButton = true
 

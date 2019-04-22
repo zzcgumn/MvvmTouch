@@ -11,8 +11,8 @@ import MvvmTouch
 
 class ViewController: UIViewController {
 
-    let presentFlowController = PresentFlowController<ColoredViewController, ColoredViewControllerModel>()
-    let pushFlowController = PushFlowController<ColoredViewController, ColoredViewControllerModel>()
+    let presentFlowController = PresentFlowController<ColoredViewController>()
+    let pushFlowController = PushFlowController<ColoredViewController>()
 
     @IBAction func presentColoredViewController(_ sender: UIButton) {
         presentFlowController.present(presentingViewController: self, makeViewModel: {

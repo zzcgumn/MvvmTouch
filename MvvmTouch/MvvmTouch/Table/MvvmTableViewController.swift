@@ -8,10 +8,11 @@
 
 import UIKit
 
-open class MvvmTableViewController<Model>: UIViewController
+open class MvvmTableViewController<Model>: MvvmViewController<Model>
 where Model: TableViewControllerModel {
     public let tableView = UITableView()
-    public var viewModel: Model? {
+
+    open override var viewModel: Model? {
         didSet {
             tableView.dataSource = viewModel?.dataSource
         }
@@ -19,7 +20,7 @@ where Model: TableViewControllerModel {
 
     open override func awakeFromNib() {
         super.awakeFromNib()
-        self.view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -33,6 +34,6 @@ where Model: TableViewControllerModel {
     }
 
     open func constraintsForTableView() -> [NSLayoutConstraint] {
-        return makeFillViewConstraints(subView: tableView)
+        return view.makeFillViewConstraints(tableView)
     }
 }

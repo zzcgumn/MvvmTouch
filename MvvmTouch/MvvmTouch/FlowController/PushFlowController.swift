@@ -8,28 +8,25 @@
 
 import UIKit
 
-public class PushFlowController<Presented, ViewModel> : FlowController
-where Presented: MvvmViewController<ViewModel> {
+public class PushFlowController<Presented> : FlowController
+where Presented: UIViewController&MvvmViewControllerProtocol {
+    typealias Controller = Presented
 
     static public var sequeIdentifier: String {
         let viewModelName = String(describing: ViewModel.self)
         return "push\(viewModelName)"
     }
 
-    public init() {
+    public init() { }
 
-    }
+    public func present(
+        presentingViewController: UIViewController,
+        makeViewModel: () -> Presented.ViewModel,
+        makeViewController: (Presented.ViewModel) -> Presented
+        ) {
 
-    public func present(presentingViewController: UIViewController,
-                        makeViewModel: () -> ViewModel,
-                        makeViewController: () -> Presented = {Presented()}) {
-
-        let presentedViewController = makeViewController()
-
-        let vm = makeViewModel()
-        presentedViewController.viewModel = vm
-
-        presentedViewController.showCloseButton = false
+        let viewModel = makeViewModel()
+        let presentedViewController = makeViewController(viewModel)
 
         let seque = UIStoryboardSegue(identifier: PushFlowController.sequeIdentifier,
                                       source: presentingViewController,

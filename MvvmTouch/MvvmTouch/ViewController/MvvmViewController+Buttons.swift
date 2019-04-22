@@ -24,7 +24,7 @@ extension MvvmViewController {
         let topConstraint = NSLayoutConstraint(item: button,
                                                attribute: .topMargin,
                                                relatedBy: .equal,
-                                               toItem: self.view,
+                                               toItem: self.view.safeAreaLayoutGuide,
                                                attribute: .top,
                                                multiplier: 1.0,
                                                constant: 28.0)
@@ -32,7 +32,7 @@ extension MvvmViewController {
         let leftConstraint = NSLayoutConstraint(item: button,
                                                 attribute: .leftMargin,
                                                 relatedBy: .equal,
-                                                toItem: self.view,
+                                                toItem: self.view.safeAreaLayoutGuide,
                                                 attribute: .left,
                                                 multiplier: 1.0,
                                                 constant: 28.0)

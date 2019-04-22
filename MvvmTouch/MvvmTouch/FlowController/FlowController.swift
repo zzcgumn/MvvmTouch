@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 
 protocol FlowController {
-    associatedtype ViewModel
-    associatedtype ViewController
+    associatedtype Controller: MvvmViewControllerProtocol
 
     static var sequeIdentifier: String { get }
 
     func present(presentingViewController: UIViewController,
-                 makeViewModel: () -> ViewModel,
-                 makeViewController: () -> ViewController)
+                 makeViewModel: () -> Controller.ViewModel,
+                 makeViewController: (Controller.ViewModel) -> Controller)
 }

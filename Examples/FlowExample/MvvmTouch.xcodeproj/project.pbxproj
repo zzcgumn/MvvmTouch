@@ -27,12 +27,9 @@
 		5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */; };
 		5B84FFD21F1555390032DC94 /* PresentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC4A91E3D157800558077 /* PresentFlowController.swift */; };
 		5B84FFD41F155C080032DC94 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4C38101F0D945800F4289A /* Flow.swift */; };
+		5B84FFD51F155CBF0032DC94 /* MvvmViewController+Flows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4C380C1F0D875600F4289A /* MvvmViewController+Flows.swift */; };
 		5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B985D671E4730990084D3FA /* ShowFlowController.swift */; };
-		5BCFE4881F1B6D3C00691E16 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFE4871F1B6D3C00691E16 /* UIView+Constraints.swift */; };
-		5BD6C1B62196519C00E8D322 /* DefaultBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6C1B52196519C00E8D322 /* DefaultBuilders.swift */; };
-		BA4C599B21AF0A5400163A91 /* Flow+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599A21AF0A5400163A91 /* Flow+Push.swift */; };
-		BA4C599D21AF0D8C00163A91 /* Flow+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */; };
-		BA4C599F21AF109300163A91 /* Flow+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C599E21AF109300163A91 /* Flow+Show.swift */; };
+		5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +49,7 @@
 		5B1C8A7E1E36949900F3DD3B /* MvvmTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1C8A831E36949A00F3DD3B /* MvvmTouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTouchTests.swift; sourceTree = "<group>"; };
 		5B1C8A851E36949A00F3DD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4C380C1F0D875600F4289A /* MvvmViewController+Flows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MvvmViewController+Flows.swift"; sourceTree = "<group>"; };
 		5B4C38101F0D945800F4289A /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		5B4D29D31E493B8400F19FF4 /* MvvmCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmCellTableViewController.swift; sourceTree = "<group>"; };
 		5B5DC4A81E3D157800558077 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
@@ -70,11 +68,7 @@
 		5B6307201E50B01900A2E349 /* TableViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerModel.swift; sourceTree = "<group>"; };
 		5B6307221E50B2D800A2E349 /* MvvmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmTableViewController.swift; sourceTree = "<group>"; };
 		5B985D671E4730990084D3FA /* ShowFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFlowController.swift; sourceTree = "<group>"; };
-		5BCFE4871F1B6D3C00691E16 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		5BD6C1B52196519C00E8D322 /* DefaultBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBuilders.swift; sourceTree = "<group>"; };
-		BA4C599A21AF0A5400163A91 /* Flow+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Push.swift"; sourceTree = "<group>"; };
-		BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Present.swift"; sourceTree = "<group>"; };
-		BA4C599E21AF109300163A91 /* Flow+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Show.swift"; sourceTree = "<group>"; };
+		5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UViewController+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,14 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				5B4C38101F0D945800F4289A /* Flow.swift */,
-				BA4C599A21AF0A5400163A91 /* Flow+Push.swift */,
-				BA4C599C21AF0D8C00163A91 /* Flow+Present.swift */,
-				BA4C599E21AF109300163A91 /* Flow+Show.swift */,
 				5B5DC4A81E3D157800558077 /* FlowController.swift */,
 				5B5DC4A91E3D157800558077 /* PresentFlowController.swift */,
 				5B5DC4BE1E3D1BC400558077 /* PushFlowController.swift */,
 				5B985D671E4730990084D3FA /* ShowFlowController.swift */,
-				5BD6C1B52196519C00E8D322 /* DefaultBuilders.swift */,
 			);
 			path = FlowController;
 			sourceTree = "<group>";
@@ -167,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				5B5DC4AC1E3D158500558077 /* MvvmViewController.swift */,
+				5B4C380C1F0D875600F4289A /* MvvmViewController+Flows.swift */,
 				5B5DC4BC1E3D191400558077 /* MvvmViewController+Buttons.swift */,
+				5BF83C211E68C990003C18DE /* UViewController+Constraints.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -190,7 +182,6 @@
 				5B5DC4B61E3D159E00558077 /* MvvmView.swift */,
 				5B5DC4B71E3D159E00558077 /* MvvmCollectionViewCell.swift */,
 				5B5DC4B81E3D159E00558077 /* MvvmTableViewCell.swift */,
-				5BCFE4871F1B6D3C00691E16 /* UIView+Constraints.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,13 +244,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Martin Nygren";
 				TargetAttributes = {
 					5B1C8A741E36949900F3DD3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = JNH48ZQ2BC;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					5B1C8A7D1E36949900F3DD3B = {
@@ -329,10 +320,10 @@
 				5B84FFD41F155C080032DC94 /* Flow.swift in Sources */,
 				5B6307231E50B2D800A2E349 /* MvvmTableViewController.swift in Sources */,
 				5B6307211E50B01900A2E349 /* TableViewControllerModel.swift in Sources */,
+				5B84FFD51F155CBF0032DC94 /* MvvmViewController+Flows.swift in Sources */,
+				5BF83C221E68C990003C18DE /* UViewController+Constraints.swift in Sources */,
 				5B5DC4B21E3D158E00558077 /* ViewModel.swift in Sources */,
 				5B985D681E4730990084D3FA /* ShowFlowController.swift in Sources */,
-				5BCFE4881F1B6D3C00691E16 /* UIView+Constraints.swift in Sources */,
-				BA4C599F21AF109300163A91 /* Flow+Show.swift in Sources */,
 				5B5DC4AA1E3D157800558077 /* FlowController.swift in Sources */,
 				5B5DC4BA1E3D159E00558077 /* MvvmCollectionViewCell.swift in Sources */,
 				5B5DC4BB1E3D159E00558077 /* MvvmTableViewCell.swift in Sources */,
@@ -343,11 +334,8 @@
 				5B5DC4B51E3D158E00558077 /* CollectionCellModel.swift in Sources */,
 				5B5DC4BF1E3D1BC400558077 /* PushFlowController.swift in Sources */,
 				5B4D29D41E493B8400F19FF4 /* MvvmCellTableViewController.swift in Sources */,
-				BA4C599B21AF0A5400163A91 /* Flow+Push.swift in Sources */,
 				5B63071F1E5096C900A2E349 /* MvvmTableViewDataSource.swift in Sources */,
-				BA4C599D21AF0D8C00163A91 /* Flow+Present.swift in Sources */,
 				5B84FFD21F1555390032DC94 /* PresentFlowController.swift in Sources */,
-				5BD6C1B62196519C00E8D322 /* DefaultBuilders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,23 +367,15 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -419,13 +399,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -441,23 +420,15 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -475,11 +446,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -504,7 +474,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -524,7 +495,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.nygren.martin.MvvmTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
